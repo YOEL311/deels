@@ -10,12 +10,12 @@ import { HomeScreen, DetailsScreen } from '../router/routers'
 import Icon from "react-native-vector-icons/AntDesign";
 
 
-const CustomDrawer = props => {
+export const CustomDrawer = props => {
     return (
         <View style={{ flex: 1, }}>
             <Icon
                 style={{ paddingLeft: 10 }}
-                onPress={() =>props.navigation.closeDrawer()}
+                onPress={() => props.navigation.closeDrawer()}
                 name="close"
                 size={30}
             />
