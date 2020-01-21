@@ -7,9 +7,18 @@ import { createAppContainer } from 'react-navigation';
 import { DrawerNavigatorItems } from 'react-navigation-drawer';
 import { HomeScreen, DetailsScreen } from '../router/routers'
 
+import Icon from "react-native-vector-icons/AntDesign";
+
+
 const CustomDrawer = props => {
     return (
         <View style={{ flex: 1, }}>
+            <Icon
+                style={{ paddingLeft: 10 }}
+                onPress={() => navigation.closeDrawer()}
+                name="close"
+                size={30}
+            />
             <DrawerNavigatorItems {...props} />
             <Text style={{ fontSize: 32 }}>Drawer</Text>
         </View>
