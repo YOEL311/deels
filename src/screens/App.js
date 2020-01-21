@@ -99,11 +99,28 @@ const RouteConfigs2 = {
     }
   },
 }
+// import { DrawerNavigatorItems } from 'react-navigation-drawer';
+
+const CustomDrawer = props => {
+  return (
+    <View style={{ flex: 1, }}>
+      <Icon
+        style={{ paddingLeft: 10 }}
+        onPress={() => props.navigation.closeDrawer()}
+        name="close"
+        size={30}
+      />
+      <DrawerNavigatorItems {...props} />
+    </View>
+  );
+
+};
 
 
 const StackNavigatorConfig = {
   mode: 'modal',
   headerMode: 'float',
+  // contentComponent: CustomDrawer,
   defaultNavigationOptions: {
     // headerL: "ssss",
     header: <Icon
@@ -137,7 +154,7 @@ const DrawerRouteConfigs = {
 
 const DrawerNavigatorConfig2 = {
   // contentComponent: (props) => <AppDrawer {...props} />,
-
+  // contentComponent: CustomDrawer,
   drawerType: 'slide',
   initialRouteName: "Home",
   mode: 'modal'

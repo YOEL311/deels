@@ -15,12 +15,11 @@ const CustomDrawer = props => {
         <View style={{ flex: 1, }}>
             <Icon
                 style={{ paddingLeft: 10 }}
-                onPress={() =>props.navigation.closeDrawer()}
+                onPress={() => props.navigation.closeDrawer()}
                 name="close"
                 size={30}
             />
             <DrawerNavigatorItems {...props} />
-            <Text style={{ fontSize: 32 }}>Drawer</Text>
         </View>
     );
 
