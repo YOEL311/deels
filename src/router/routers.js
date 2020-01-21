@@ -15,6 +15,7 @@ class HomeScreen extends React.Component {
             <Icon
                 style={{ paddingLeft: 10 }}
                 onPress={() => navigation.openDrawer()}
+                // onPress={() => this.props.navigation.toggleDrawer()}
                 name="menu"
                 size={30}
             />

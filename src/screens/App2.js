@@ -15,7 +15,7 @@ const CustomDrawer = props => {
         <View style={{ flex: 1, }}>
             <Icon
                 style={{ paddingLeft: 10 }}
-                onPress={() => navigation.closeDrawer()}
+                onPress={() =>props.navigation.closeDrawer()}
                 name="close"
                 size={30}
             />
