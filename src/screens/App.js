@@ -4,8 +4,9 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { DrawerNavigatorItems } from 'react-navigation-drawer';
 import { HomeScreen, DetailsScreen } from '../router/routers'
 import { StyleSheet } from 'react-native'
-
-
+import React from 'react'
+import Icon from "react-native-vector-icons/Entypo";
+import { CustomDrawer } from './App2'
 
 const RouteConfigs = {
   HomeScreen: {//Title
@@ -77,13 +78,6 @@ const styles = StyleSheet.create({
 });
 
 
-// const Navigator = createDrawerNavigator(RouteConfigs, DrawerNavigatorConfig);
-// export default createAppContainer(Navigator);
-
-// HomeScreen:
-// DetailsScreen:
-
-
 
 const RouteConfigs2 = {
   HomeScreen: {//Title
@@ -99,50 +93,24 @@ const RouteConfigs2 = {
     }
   },
 }
-// import { DrawerNavigatorItems } from 'react-navigation-drawer';
-
-const CustomDrawer = props => {
-  return (
-    <View style={{ flex: 1, }}>
-      <Icon
-        style={{ paddingLeft: 10 }}
-        onPress={() => props.navigation.closeDrawer()}
-        name="close"
-        size={30}
-      />
-      <DrawerNavigatorItems {...props} />
-    </View>
-  );
-
-};
-
-
+const navigationOptionsHeader = ({ navigation }) => {
+  return {
+    headerRight: <Icon
+      style={{ paddingLeft: 10 }}
+      onPress={() => {
+        navigation.toggleDrawer();
+      }}
+      name="menu"
+      size={30}
+    />
+  }
+}
 const StackNavigatorConfig = {
   mode: 'modal',
   headerMode: 'float',
-  // contentComponent: CustomDrawer,
-  defaultNavigationOptions: {
-    // headerL: "ssss",
-    header: <Icon
-      style={{ paddingLeft: 10 }}
-      name="menu"
-      size={30}
-    />,
-    title: 'jkhkjons',
-    headerTitle: 'jhjtions',
-    // headerLeft: (
-    //   <Icon
-    //     style={{ paddingLeft: 10 }}
-    //     name="menu"
-    //     size={30}
-    //   />
-    // ),
-    // header: props => <AppBar {...props} searchable />,
-    // headerLeft:                <Icon name="rocket1" size={30} color="#900" />,
-    headerStyle: {
-      backgroundColor: "blue"
-    },
-  },
+  contentComponent: CustomDrawer,
+  defaultNavigationOptions: navigationOptionsHeader,
+
 }
 
 
@@ -153,8 +121,7 @@ const DrawerRouteConfigs = {
 }
 
 const DrawerNavigatorConfig2 = {
-  // contentComponent: (props) => <AppDrawer {...props} />,
-  // contentComponent: CustomDrawer,
+  contentComponent: CustomDrawer,
   drawerType: 'slide',
   initialRouteName: "Home",
   mode: 'modal'
