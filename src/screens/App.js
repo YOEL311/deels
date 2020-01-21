@@ -95,36 +95,50 @@ const RouteConfigs2 = {
 }
 const navigationOptionsHeader = ({ navigation }) => {
   return {
-    headerRight: <Icon
+    headerStyle: {
+      backgroundColor: 'blue',
+    },
+    headerTintColor: 'white',
+    headerTitleStyle: {
+      color: 'gray',
+      backgroundColor: 'black',
+
+    },
+    headerRight: () => <Icon
       style={{ paddingLeft: 10 }}
       onPress={() => {
         navigation.toggleDrawer();
       }}
       name="menu"
       size={30}
-    />
+    />,
   }
 }
 const StackNavigatorConfig = {
   mode: 'modal',
   headerMode: 'float',
-  contentComponent: CustomDrawer,
+  intialRouteName: 'DetailsScreen',
+  // contentComponent: CustomDrawer,
   defaultNavigationOptions: navigationOptionsHeader,
-
 }
 
 
 export const HomeStackNavigator = createStackNavigator(RouteConfigs2, StackNavigatorConfig);
 
 const DrawerRouteConfigs = {
-  Home: HomeStackNavigator
+  Home: HomeStackNavigator,
+  ss: DetailsScreen,
 }
 
 const DrawerNavigatorConfig2 = {
+  defaultNavigationOptions: navigationOptionsHeader,
   contentComponent: CustomDrawer,
+  mode: 'modal',
+  intialRouteName: 'DetailsScreen',
   drawerType: 'slide',
-  initialRouteName: "Home",
-  mode: 'modal'
+  drawerBackgroundColor: '#f4f5f8',
+  // drawerWidth: 190,
+  overlayColor: 0,
 }
 
 const AppDrawer = createDrawerNavigator(DrawerRouteConfigs, DrawerNavigatorConfig2);

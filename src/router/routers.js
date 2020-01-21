@@ -8,21 +8,7 @@ import Icon from "react-native-vector-icons/Entypo";
 
 
 class HomeScreen extends React.Component {
-    static navigationOptions = ({ navigation }) => ({
-        // title: 'Notifications',
-        // headerTitle: 'Notifications',
-        // headerStyle: { color: 'blue' },
-
-        // headerLeft: (
-        //     <Icon
-        //         style={{ paddingLeft: 10 }}
-        //         onPress={() => navigation.openDrawer()}
-        //         // onPress={() => this.props.navigation.toggleDrawer()}
-        //         name="menu"
-        //         size={30}
-        //     />
-        // )
-    });
+   
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -42,7 +28,7 @@ class HomeScreen extends React.Component {
                     color="#ccc"
                     size={25}
                 />
-                <Icon name="rocket1" size={30} color="#900" />
+                <Icon name="menu" size={30} color="#900" />
 
             </View>
         );
