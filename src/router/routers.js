@@ -8,10 +8,18 @@ import Icon from "react-native-vector-icons/Entypo";
 
 
 class HomeScreen extends React.Component {
-    static navigationOptions = ({ navigation}) => ({
+    static navigationOptions = ({ navigation }) => ({
         title: 'Notifications',
         headerTitle: 'Notifications',
-      });
+        headerLeft: (
+            <Icon
+                style={{ paddingLeft: 10 }}
+                onPress={() => navigation.openDrawer()}
+                name="menu"
+                size={30}
+            />
+        )
+    });
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

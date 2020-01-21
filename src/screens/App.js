@@ -4,6 +4,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { DrawerNavigatorItems } from 'react-navigation-drawer';
 import { HomeScreen, DetailsScreen } from '../router/routers'
 import { StyleSheet } from 'react-native'
+import Icon from "react-native-vector-icons/Entypo";
 
 
 
@@ -104,12 +105,11 @@ const RouteConfigs2 = {
 const StackNavigatorConfig = {
   mode: 'modal',
   headerMode: 'float',
-  // defaultNavigationOptions: {
-  // header: props => <AppBar {...props} searchable />,
-  // headerStyle: {
-  // backgroundColor: "transparent"
-  // },
-  // },
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: "gray"
+    },
+  },
 }
 
 
@@ -120,8 +120,6 @@ const DrawerRouteConfigs = {
 }
 
 const DrawerNavigatorConfig2 = {
-  // contentComponent: (props) => <AppDrawer {...props} />,
-  
   drawerType: 'slide',
   initialRouteName: "Home",
   mode: 'modal'
