@@ -9,8 +9,8 @@ import Icon from "react-native-vector-icons/Entypo";
 
 class HomeScreen extends React.Component {
     static navigationOptions = ({ navigation }) => ({
-        title: 'Notifications',
-        headerTitle: 'Notifications',
+        // title: 'Notifications',
+        // headerTitle: 'Notifications',
         headerLeft: (
             <Icon
                 style={{ paddingLeft: 10 }}
