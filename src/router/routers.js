@@ -36,6 +36,10 @@ class HomeScreen extends React.Component {
 }
 
 class DetailsScreen extends React.Component {
+    static navigationOptions = ({ navigation}) => ({
+        title: 'Notifications',
+        headerTitle: 'Notifications',
+      });
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
