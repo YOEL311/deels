@@ -32,41 +32,8 @@ const RouteConfigs = {
     navigationOptions: {
       drawerLabel: "הרשמה לחבר מועדון"
     }
-  },
-  Screen5: {
-    screen: HomeScreen,
-    navigationOptions: {
-      drawerLabel: "הרשמה לחבר "
-    }
-  },
-  Screen6: {//Title
-    screen: HomeScreen,
-    navigationOptions: {
-      drawerLabel: "הרשמה לחבר מועדון"
-    }
-  },
-  Screen7: {//Title
-    screen: HomeScreen,
-    navigationOptions: {
-      drawerLabel: "הרשמה לחבר מועדון"
-    }
-  },
-}
 
-const DrawerNavigatorConfig = {
 
-  defaultNavigationOptions: navigationOptionsHeader,
-  contentComponent: CustomDrawer,
-
-  intialRouteName: 'DetailsScreen',
-  navigationOptions: {
-
-    headerStyle: { backgroundColor: 'blue' },
-    title: 'You are not logged in',
-    headerTintColor: 'white',
-    headerTitleStyle: {
-      color: 'blue',
-    },
   },
   drawerType: 'slide',
   drawerBackgroundColor: '#f4f5f8',
@@ -104,6 +71,7 @@ const RouteConfigs2 = {
 }
 const navigationOptionsHeader = ({ navigation }) => {
   return {
+    headerTitle:'dddd',
     headerStyle: {
       backgroundColor: 'blue',
     },
@@ -113,6 +81,7 @@ const navigationOptionsHeader = ({ navigation }) => {
       backgroundColor: 'black',
 
     },
+
     headerRight: () => <Icon
       style={{ paddingLeft: 10 }}
       onPress={() => {
@@ -124,34 +93,30 @@ const navigationOptionsHeader = ({ navigation }) => {
   }
 }
 const StackNavigatorConfig = {
+  contentComponent: CustomDrawer,
+
   mode: 'modal',
   headerMode: 'float',
   intialRouteName: 'DetailsScreen',
-  // contentComponent: CustomDrawer,
-  defaultNavigationOptions: navigationOptionsHeader,
 }
-
-
-export const HomeStackNavigator = createStackNavigator(RouteConfigs2, StackNavigatorConfig);
-
+const HomeStackNavigator = createDrawerNavigator(RouteConfigs2, StackNavigatorConfig);
 const DrawerRouteConfigs = {
-  Home: HomeStackNavigator,
-  ss: DetailsScreen,
+  // Home: HomeStackNavigator,
+
+  DetailsScreen: { //Title
+    screen: HomeStackNavigator,
+    defaultNavigationOptions: {
+      drawerLabel: "wwwww"
+    }
+  },
+
 }
 
 const DrawerNavigatorConfig2 = {
-  // defaultNavigationOptions: navigationOptionsHeader,
-  // contentComponent: CustomDrawer,
-  // contentComponent: (props) => <AppDrawer {...props} />,
-
+  defaultNavigationOptions: navigationOptionsHeader,
   mode: 'modal',
   intialRouteName: 'DetailsScreen',
   drawerType: 'slide',
-  drawerBackgroundColor: '#f4f5f8',
-  // drawerWidth: 190,
-  overlayColor: 0,
 }
-
-const AppDrawer = createDrawerNavigator(DrawerRouteConfigs, DrawerNavigatorConfig2);
-
+const AppDrawer = createStackNavigator(DrawerRouteConfigs, DrawerNavigatorConfig2);
 export default createAppContainer(AppDrawer);

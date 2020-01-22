@@ -8,9 +8,9 @@ import Icon from "react-native-vector-icons/Entypo";
 
 
 class HomeScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Details',
-      };
+    // static navigationOptions = {
+        // title: 'Details',
+    //   };
    
     render() {
         return (
@@ -42,9 +42,11 @@ class HomeScreen extends React.Component {
 }
 
 class DetailsScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Details',
-      };
+
+    static navigationOptions = ({ navigation}) => ({
+        title: 'Notifications',
+        headerTitle: 'Notifications',
+      });
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
