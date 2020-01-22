@@ -8,6 +8,9 @@ import Icon from "react-native-vector-icons/Entypo";
 
 
 class HomeScreen extends React.Component {
+    static navigationOptions = {
+        title: 'Details',
+      };
    
     render() {
         return (
@@ -27,8 +30,11 @@ class HomeScreen extends React.Component {
                     name="menu"
                     color="#ccc"
                     size={25}
+                    style={{marginRight:10}} 
                 />
-                <Icon name="menu" size={30} color="#900" />
+                <Icon name="menu" 
+                 style={{marginRight:10}} 
+                size={30} color="#900" />
 
             </View>
         );
@@ -36,6 +42,9 @@ class HomeScreen extends React.Component {
 }
 
 class DetailsScreen extends React.Component {
+    static navigationOptions = {
+        title: 'Details',
+      };
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

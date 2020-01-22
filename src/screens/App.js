@@ -54,10 +54,14 @@ const RouteConfigs = {
 }
 
 const DrawerNavigatorConfig = {
+
+  defaultNavigationOptions: navigationOptionsHeader,
+  contentComponent: CustomDrawer,
+
   intialRouteName: 'DetailsScreen',
   navigationOptions: {
 
-    headerStyle: { backgroundColor: '#E73536' },
+    headerStyle: { backgroundColor: 'blue' },
     title: 'You are not logged in',
     headerTintColor: 'white',
     headerTitleStyle: {
@@ -76,6 +80,11 @@ const styles = StyleSheet.create({
     height: 48,
   },
 });
+
+
+// const Navigator = createDrawerNavigator(RouteConfigs, DrawerNavigatorConfig);
+// export default createAppContainer(Navigator);
+
 
 
 
@@ -131,8 +140,10 @@ const DrawerRouteConfigs = {
 }
 
 const DrawerNavigatorConfig2 = {
-  defaultNavigationOptions: navigationOptionsHeader,
-  contentComponent: CustomDrawer,
+  // defaultNavigationOptions: navigationOptionsHeader,
+  // contentComponent: CustomDrawer,
+  // contentComponent: (props) => <AppDrawer {...props} />,
+
   mode: 'modal',
   intialRouteName: 'DetailsScreen',
   drawerType: 'slide',
