@@ -35,11 +35,11 @@ export const CustomDrawer = props => {
 
                 <View style={{ justifyContent: 'center', padding: 20 }}>
                     <IconSimpleLine style={styles.iconStyle}
-                        onPress={() => props.navigation.closeDrawer()}
+                        // onPress={() => props.navigation.closeDrawer()}
                         name="settings"
                         color={'gray'}
                         size={30}
-                        onPress={() => props.navigation.navigate('SettingScreen')}
+                        onPress={(props) => props.navigation.navigate('SettingScreen')}
                     />
                     <Text style={styles.textIconStyle}>
                         Settings
