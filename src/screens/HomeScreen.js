@@ -6,7 +6,7 @@ export default class HomeScreen extends React.Component {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <StatusBar backgroundColor="#374a65" barStyle="light-content" />
-
+                
                 <Text>Home Screen</Text>
                 <Button
                     title="Go to Details"
