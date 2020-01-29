@@ -2,16 +2,15 @@
 import { Alert } from 'react-native'
 const toGoOut = () => {
     Alert.alert(
-        'Alert Title',
-        'My Alert Msg',
+        'התנתקות',
+        'האם אתה בטוח שברצונך להתנתק?',
         [
-            { text: 'Ask me later', onPress: () => console.log('Ask me later pressed') },
             {
-                text: 'Cancel',
+                text: 'ביטול',
                 onPress: () => console.log('Cancel Pressed'),
                 style: 'cancel',
             },
-            { text: 'OK', onPress: () => console.log('OK Pressed') },
+            { text: 'אישור', onPress: () => console.log('OK Pressed') },
         ],
         { cancelable: false },
     );
