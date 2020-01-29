@@ -1,10 +1,11 @@
 import HomeScreen from '../screens/HomeScreen'
 import DetailsScreen from '../screens/DetailsScreen'
 import SettingScreen from '../screens/SettingScreen'
+import DeelScreen from '../screens/DellsScreen'
 
 export default RouteConfigs = {
     HomeScreen: {//Title
-        screen: HomeScreen,
+        screen: DeelScreen,
         navigationOptions: {
             drawerLabel: "הדילים שלנו"
         }
