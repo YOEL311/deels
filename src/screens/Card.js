@@ -26,7 +26,7 @@ const onShare = (props) => {
 const MyCard = (propd) => {
     return (
         <View>
-            <Card style={{ flex: 0, backgroundColor: 'gray' }}>
+            <Card style={{ flex: 0, backgroundColor: 'white' }}>
                 <CardItem style={{ backgroundColor: 'white' }}>
                     <Left>
                         <Thumbnail
