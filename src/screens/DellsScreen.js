@@ -7,16 +7,26 @@ import {
   Content,
 } from 'native-base';
 import MyCard from './Card';
+import data from '../data.js'
 export default class DellsScreen extends Component {
+
+  renderCards = () => {
+    let cards = data.map((curr) => {
+      return (
+        <MyCard data={curr} key={curr.title} />
+      )
+    })
+    return cards
+  }
+
   render() {
     return (
       <Container>
         {/* <Header /> */}
         <Content>
           <ScrollView>
-            <MyCard />
-            <MyCard />
-            <MyCard />
+
+            {this.renderCards()}
           </ScrollView>
         </Content>
       </Container >

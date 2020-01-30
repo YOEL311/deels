@@ -2,113 +2,102 @@
 import React from 'react';
 import { View, TouchableHighlight } from 'react-native';
 import {
-    Card,
-    CardItem,
-    Thumbnail,
-    Text,
-    Button,
-    Icon,
-    Left,
-    Body,
+  Card,
+  CardItem,
+  Thumbnail,
+  Text,
+  Button,
+  Icon,
+  Left,
+  Body,
 } from 'native-base';
 import Swiper from './Swiper';
 import { Share } from "react-native"
 import { format } from "date-fns";
+
 const onShare = (props) => {
-    Share.share(
-        {
-            title: "a title",
-            message: "some message",
-            url: "http://news.nativcell.com/news/2019/7/4335a2085191b528c708.jpgF"
-        },
-    );
+  Share.share(
+    {
+      title: "a title",
+      message: "some message",
+      url: "http://news.nativcell.com/news/2019/7/4335a2085191b528c708.jpgF"
+    },
+  );
 }
-const MyCard = (propd) => {
-    return (
-        <View>
-            <Card style={{ flex: 0, backgroundColor: 'white' }}>
-                <CardItem style={{ backgroundColor: 'white' }}>
-                    <Left>
-                        <Thumbnail
-                            source={require('../assets/plane.png')} />
-                        <Body>
-                            <Text >
-                                Travel Tours
-                    </Text>
-                            {/* <Text note>{format(Date.now(), "MMMM d, yyyy")}</Text> */}
-                            <Text note>{renderDate()}</Text>
-                        </Body>
-                    </Left>
-                </CardItem>
+const MyCard = ({ data }) => {
+  // if () console.log(data.title);
+  return (
+    <View>
+      <Card style={{ flex: 0 }}>
+        <CardItem style={{ backgroundColor: '#ADD8E6' }}>
+          <Left>
+            <Thumbnail
+              source={require('../assets/flight.png')} />
+            <Body>
+              <Text>
+                Travel Tours
+              </Text>
+              {/* <Text note>{format(Date.now(), "MMMM d, yyyy")}</Text> */}
+              <Text note>{renderDate(data.date)}</Text>
+            </Body>
+          </Left>
+        </CardItem>
 
-                <CardItem>
-                    <Left>
-                        <Body>
-                            <DetailsDeel />
-                        </Body>
-                    </Left>
-                </CardItem>
-                <CardItem>
-                    <Swiper />
-                </CardItem>
+        <CardItem>
+          <Left>
+            <Body>
+              <DetailsDeel details={data.details} />
+            </Body>
+          </Left>
+        </CardItem>
+        <CardItem>
+          <Swiper images={data.images} />
+        </CardItem>
 
-                <CardItem>
-                    <Left>
-                        <Button transparent>
-                            <Icon
-                                onPress={() => {
-                                    onShare()
-                                    console.log('on prees share')
-                                }}
-                                name="share"
-                            />
-                        </Button>
-                    </Left>
+        <CardItem>
+          <Left>
+            <Button transparent>
+              <Icon
+                onPress={() => {
+                  onShare()
+                  console.log('on prees share')
+                }}
+                name="share"
+              />
+            </Button>
+          </Left>
 
-                </CardItem>
-            </Card>
-        </View>
-    );
+        </CardItem>
+      </Card>
+    </View>
+  );
 };
 import { useState } from 'react';
 
-const DetailsDeel = () => {
-    const [more, setMore] = useState(false)
-    const detailsss = "\r\n\u05D0\u05D9\u05E1\u05D8\u05E0\u05D1\u05D5\u05DC \u05D1\u05D3\u05D9\u05DC \u05E9\u05DB\u05D5\u05DC\u05DC \u05D4\u05DB\u05DC!! \u05D4\u05D7\u05DC \u05DE- 1590 \u20AA \u05DC\u05D0\u05D3\u05DD!\r\n\r\n\u05DB\u05D5\u05DC\u05DC \u05D8\u05D9\u05E1\u05D4 \u05D9\u05E9\u05D9\u05E8\u05D4 + \u05DE\u05DC\u05D5\u05DF \u05D1\u05E8\u05E1\u05DC\u05D5 5 \u05DB\u05D5\u05DB\u05D1\u05D9\u05DD \u05D4\u05DE\u05D1\u05D5\u05E7\u05E9 \u05D5\u05D4\u05DE\u05E4\u05D5\u05D0\u05E8 +\u05DE\u05D6\u05D5\u05D5\u05D3\u05D4 \u05D2\u05D3\u05D5\u05DC\u05D4 \u05E2\u05D3 20 \u05E7\"\u05D2 \u05D5\u05D8\u05E8\u05D5\u05DC\u05D9 \u05DC\u05DB\u05DC \u05E0\u05D5\u05E1\u05E2! \uD83D\uDE31\uD83D\uDE31\r\n\r\n\u05DC\u05E4\u05E0\u05D9\u05DB\u05DD 7 \u05EA\u05D0\u05E8\u05D9\u05DB\u05D9 \u05D1\u05D7\u05D9\u05E8\u05D4 \u05DC\u05E0\u05D5\u05D7\u05D9\u05D5\u05EA\u05DB\u05DD : \uD83E\uDD17\r\n\r\n...\r\n16\/02-20\/02 - \u05D4\u05DC\u05D5\u05DA \u05E8\u05D0\u05E9\u05D5\u05DF \u05D1\u05D5\u05E7\u05E8, \u05D7\u05D6\u05D5\u05E8 \u05D7\u05DE\u05D9\u05E9\u05D9 \u05D1\u05D5\u05E7\u05E8.\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 1740 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2 - \u05E8\u05E7 1690 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1590 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\r\n17\/02-21\/02 - \u05D4\u05DC\u05D5\u05DA \u05E9\u05E0\u05D9 \u05D1\u05D5\u05E7\u05E8, \u05D7\u05D6\u05D5\u05E8 \u05E9\u05D9\u05E9\u05D9 \u05D1\u05D5\u05E7\u05E8.\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 1790 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2 - \u05E8\u05E7 1760 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1590 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\r\n20\/02-24\/02- \u05D4\u05DC\u05D5\u05DA \u05D9\u05D5\u05DD \u05D7\u05DE\u05D9\u05E9\u05D9 \u05D1\u05D5\u05E7\u05E8, \u05D7\u05D6\u05D5\u05E8 \u05E9\u05E0\u05D9 \u05D0\u05D7\u05E8 \u05D1\u05D5\u05E7\u05E8.\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 1890 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD!\r\n\u05D6\u05D5\u05D2- \u05E8\u05E7 1790 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD!\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1650 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD!\r\n\r\n11\/03-15\/03 - \u05D4\u05DC\u05D5\u05DA \u05E8\u05D1\u05D9\u05E2\u05D9 \u05E6\u05D4\u05E8\u05D9\u05D9\u05DD, \u05D7\u05D6\u05D5\u05E8 \u05E8\u05D0\u05E9\u05D5\u05DF \u05D1\u05D5\u05E7\u05E8.\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 2060 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2 - \u05E8\u05E7 1940 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1690 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\r\n21\/04-25\/04 - \u05D4\u05DC\u05D5\u05DA \u05E9\u05DC\u05D9\u05E9\u05D9 \u05D1\u05D5\u05E7\u05E8, \u05D7\u05D6\u05D5\u05E8 \u05E9\u05D1\u05EA \u05DC\u05D9\u05DC\u05D4. [\u05D9\u05DE\u05D9\u05DD \u05DE\u05DC\u05D0\u05D9\u05DD!]\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 2060 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2 - \u05E8\u05E7 1940 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1790 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\r\n24\/04-28\/04 - \u05D4\u05DC\u05D5\u05DA \u05E9\u05D9\u05E9\u05D9 \u05D1\u05D5\u05E7\u05E8, \u05D7\u05D6\u05D5\u05E8 \u05E9\u05DC\u05D9\u05E9\u05D9 \u05E2\u05E8\u05D1. [\u05D9\u05DE\u05D9\u05DD \u05DE\u05DC\u05D0\u05D9\u05DD!]\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 2190 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2 - \u05E8\u05E7 2060 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1890 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\r\n10\/05-14\/05 - \u05D4\u05DC\u05D5\u05DA \u05E8\u05D0\u05E9\u05D5\u05DF \u05D1\u05D5\u05E7\u05E8, \u05D7\u05D6\u05D5\u05E8 \u05D7\u05DE\u05D9\u05E9\u05D9 \u05E2\u05E8\u05D1. [\u05D9\u05DE\u05D9\u05DD \u05DE\u05DC\u05D0\u05D9\u05DD!]\r\n\r\n3 \u05DE\u05D1\u05D5\u05D2\u05E8\u05D9\u05DD- \u05E8\u05E7 1790 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2 - \u05E8\u05E7 1690 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\u05D6\u05D5\u05D2+1- \u05E8\u05E7 1590 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD.\r\n\r\n\u05D4\u05D3\u05D9\u05DC \u05DB\u05D5\u05DC\u05DC \u05D8\u05D9\u05E1\u05D5\u05EA \u05D9\u05E9\u05D9\u05E8\u05D5\u05EA \u05DC\u05D0\u05D9\u05E1\u05D8\u05E0\u05D1\u05D5\u05DC \u05D5\u05DE\u05DC\u05D5\u05DF 5 \u05DB\u05D5\u05DB\u05D1\u05D9\u05DD \u05DE\u05E2\u05D5\u05DC\u05D4 \u05E2\u05DD \u05D1\u05D9\u05E7\u05D5\u05E8\u05D5\u05EA \u05DE\u05E2\u05D5\u05DC\u05D5\u05EA! \u05DE\u05DC\u05D5\u05DF \u05DE\u05D4\u05DE\u05DD \u05D4\u05E9\u05D5\u05DB\u05DF \u05D1\u05DC\u05D1 \u05D0\u05D9\u05E1\u05D8\u05E0\u05D1\u05D5\u05DC \u05D1\u05DE\u05D9\u05E7\u05D5\u05DD \u05DE\u05E2\u05D5\u05DC\u05D4 \u05E8\u05E7 500 \u05DE\u05D8\u05E8\u05D9\u05DD \u05DE\u05DB\u05D9\u05DB\u05E8 \u05D8\u05E7\u05E1\u05D9\u05DD \u05D4\u05DE\u05E8\u05DB\u05D6\u05D9\u05EA \u05D5\u05D4\u05EA\u05D5\u05E1\u05E1\u05EA. \u05D1\u05DE\u05DC\u05D5\u05DF \u05D9\u05E9 \u05DE\u05E8\u05DB\u05D6 \u05E1\u05E4\u05D0 \u05E2\u05E0\u05E7!! \u05D1\u05D2\u05D5\u05D3\u05DC \u05E9\u05DC 1500 \u05DE\"\u05E8 \u05E2\u05DD \u05E1\u05D0\u05D5\u05E0\u05D4 \u05D4\u05DE\u05DE\u05D5\u05E7\u05DE\u05EA \u05D1\u05E7\u05D5\u05DE\u05D4 \u05D4- (11- \u05DE\u05D8\u05D5\u05E8\u05E3 ) \u05D7\u05DE\u05D0\u05DD \u05D8\u05D5\u05E8\u05E7\u05D9 \u05D5\u05D7\u05D3\u05E8 \u05DB\u05D5\u05E9\u05E8. \u05D4\u05D7\u05D3\u05E8\u05D9\u05DD \u05E2\u05D5\u05E6\u05D1\u05D5 \u05E2\"\u05D9 \u05DE\u05E2\u05E6\u05D1 \u05DE\u05E4\u05D5\u05E8\u05E1\u05DD. \u05D1\u05DE\u05DC\u05D5\u05DF \u05D9\u05E9 \u05D1\u05E8 \u05E2\u05DC \u05D4\u05D2\u05D2, \u05E9\u05DD \u05E0\u05D9\u05EA\u05DF \u05DC\u05DE\u05E6\u05D5\u05D0 \u05D0\u05D6\u05D5\u05E8 \u05D8\u05E8\u05E1\u05EA \u05E9\u05DE\u05E9 \u05E2\u05DD \u05D0\u05DE\u05D1\u05D8\u05D9\u05D5\u05EA \u05E2\u05D9\u05E1\u05D5\u05D9 \u05D5\u05E0\u05D5\u05E3 \u05DE\u05E9\u05D2\u05E2! \u05E9\u05D3\u05E8\u05EA \u05D0\u05D9\u05E1\u05D8\u05D9\u05E7\u05DC\u05D0\u05DC \u05E9\u05DD \u05EA\u05DE\u05E6\u05D0\u05D5 \u05E9\u05E4\u05E2 \u05E9\u05DC \u05DE\u05E1\u05E2\u05D3\u05D5\u05EA, \u05D1\u05EA\u05D9 \u05E7\u05E4\u05D4, \u05D1\u05E8\u05D9\u05DD, \u05D7\u05E0\u05D5\u05D9\u05D5\u05EA \u05D5\u05D2\u05DC\u05E8\u05D9\u05D5\u05EA \u05D0\u05DE\u05E0\u05D5\u05EA \u05DE\u05DE\u05D5\u05E7\u05DE\u05EA \u05D1\u05DE\u05E8\u05D7\u05E7 \u05E9\u05DC 15 \u05D3\u05E7\u05D5\u05EA \u05D4\u05DC\u05D9\u05DB\u05D4 \u05DE\u05E9\u05DD. \u05DB\u05DE\u05D5 \u05DB\u05DF \u05D4\u05DE\u05DC\u05D5\u05DF \u05E9\u05D5\u05DB\u05DF \u05D1\u05DE\u05E8\u05D7\u05E7 \u05E9\u05DC 1.7 \u05E7\"\u05DE \u05DE\u05D0\u05D6\u05D5\u05E8 \u05D4\u05E7\u05E0\u05D9\u05D5\u05EA \u05D4\u05D9\u05D5\u05E7\u05E8\u05EA\u05D9 \u05E0\u05D9\u05E9\u05E0\u05D8\u05D0\u05E9\u05D9!!!\r\n\r\n\u05E9\u05DD \u05D4\u05DE\u05DC\u05D5\u05DF :5*: Barcel\u00F3 Istanbul\r\n\r\n*\u05E0\u05D9\u05EA\u05DF \u05DC\u05D4\u05D5\u05E1\u05D9\u05E3 190 \u05E9\"\u05D7 \u05DC\u05D0\u05D3\u05DD \u05DC\u05EA\u05D5\u05E1\u05E4\u05EA \u05D0\u05E8\u05D5\u05D7\u05EA \u05D1\u05D5\u05E7\u05E8 \u05DC\u05DB\u05DC \u05D4\u05E9\u05D4\u05D9\u05D9\u05D4.\r\n*\u05E0\u05D9\u05EA\u05DF \u05DC\u05E9\u05DC\u05DD \u05E2\u05D3 12 \u05EA\u05E9\u05DC\u05D5\u05DE\u05D9\u05DD\r\n*\u05DB\u05D5\u05DC\u05DC \u05D8\u05E8\u05D5\u05DC\u05D9 \u05E2\u05D3 8 \u05E7\"\u05D2 \u05D5\u05DB\u05D5\u05DC\u05DC \u05DE\u05D6\u05D5\u05D5\u05D3\u05D4 1 \u05E2\u05D3 20 \u05E7\"\u05D2 \u05DC\u05DB\u05DC \u05E0\u05D5\u05E1\u05E2!\r\n*\u05E0\u05D9\u05EA\u05DF \u05DC\u05D4\u05D5\u05E1\u05D9\u05E3 \u05DE\u05D6\u05D5\u05D5\u05D3\u05D4 \u05D2\u05D3\u05D5\u05DC\u05D4 \u05D1\u05EA\u05D5\u05E1\u05E4\u05EA \u05EA\u05E9\u05DC\u05D5\u05DD.\r\n*\u05DC\u05D0 \u05DB\u05D5\u05DC\u05DC \u05D4\u05E2\u05D1\u05E8\u05D5\u05EA.\r\n*\u05DE\u05D7\u05D9\u05E8 \u05E0\u05DB\u05D5\u05DF \u05DC 29\/01 \u05D1\u05E9\u05E2\u05EA \u05D4\u05E4\u05E8\u05E1\u05D5\u05DD \u05D5\u05E2\u05EA\u05D9\u05D3 \u05DC\u05D4\u05E9\u05EA\u05E0\u05D5\u05EA.\r\n\u05DC\u05D4\u05D6\u05DE\u05E0\u05D5\u05EA \u05D7\u05D9\u05D9\u05D2\u05D5 \u05D0\u05DC\u05D9\u05E0\u05D5 0733744555\r\n ";
-    const dd = "FLY MORE PAY LESS מפגיזים בדיל מהסרטים שוב!!:) - דיל נדיר לאי סנטוריני המדהים רק 1950 שח לאדם!! (להרכב של זוג) הכולל טיסות ישירות בתאריכים 24.7-28.7 שעות טיסה :08:00 חזור 10:30 + מזוודה + מלון 4 כוכבים אקסקלוסיבי מדהים בשם : Antinea Suites & Spa Hotel עם ארוחת בוקר מהרו מס המקומות מוגבל ! *הדיל לכרגע- ומחירים יכולים להשתנות בכל עת *"
-    // const ss = "FLY MORE PAY LESS \u05DE\u05E4\u05D2\u05D9\u05D6\u05D9\u05DD \u05D1\u05D3\u05D9\u05DC \u05DE\u05D4\u05E1\u05E8\u05D8\u05D9\u05DD \u05E9\u05D5\u05D1!!:) - \u05D3\u05D9\u05DC \u05E0\u05D3\u05D9\u05E8 \u05DC\u05D0\u05D9 \u05E1\u05E0\u05D8\u05D5\u05E8\u05D9\u05E0\u05D9 \u05D4\u05DE\u05D3\u05D4\u05D9\u05DD \u05E8\u05E7 1950 \u05E9\u05D7 \u05DC\u05D0\u05D3\u05DD!! (\u05DC\u05D4\u05E8\u05DB\u05D1 \u05E9\u05DC \u05D6\u05D5\u05D2) \u05D4\u05DB\u05D5\u05DC\u05DC \u05D8\u05D9\u05E1\u05D5\u05EA \u05D9\u05E9\u05D9\u05E8\u05D5\u05EA \u05D1\u05EA\u05D0\u05E8\u05D9\u05DB\u05D9\u05DD 24.7-28.7 \u05E9\u05E2\u05D5\u05EA \u05D8\u05D9\u05E1\u05D4 :08:00 \u05D7\u05D6\u05D5\u05E8 10:30 + \u05DE\u05D6\u05D5\u05D5\u05D3\u05D4 + \u05DE\u05DC\u05D5\u05DF 4 \u05DB\u05D5\u05DB\u05D1\u05D9\u05DD \u05D0\u05E7\u05E1\u05E7\u05DC\u05D5\u05E1\u05D9\u05D1\u05D9 \u05DE\u05D3\u05D4\u05D9\u05DD \u05D1\u05E9\u05DD : Antinea Suites & Spa Hotel \u05E2\u05DD \u05D0\u05E8\u05D5\u05D7\u05EA \u05D1\u05D5\u05E7\u05E8 \u05DE\u05D4\u05E8\u05D5 \u05DE\u05E1 \u05D4\u05DE\u05E7\u05D5\u05DE\u05D5\u05EA \u05DE\u05D5\u05D2\u05D1\u05DC ! *\u05D4\u05D3\u05D9\u05DC \u05DC\u05DB\u05E8\u05D2\u05E2- \u05D5\u05DE\u05D7\u05D9\u05E8\u05D9\u05DD \u05D9\u05DB\u05D5\u05DC\u05D9\u05DD \u05DC\u05D4\u05E9\u05EA\u05E0\u05D5\u05EA \u05D1\u05DB\u05DC \u05E2\u05EA *",
-
-    return (
-        <View>
-            <Text numberOfLines={more ? 30 : 2}
-                ellipsizeMode='tail'
-            >
-                {dd}
-            </Text>
-            <TouchableHighlight onPress={() => {
-                console.log('onPrees show more')
-                setMore(!more)
-            }}>
-                <Text style={{ color: 'gray', fontSize: 13 }} uppercase={false}>
-                    {more ? 'less' : 'Show more...'}
-                </Text>
-            </TouchableHighlight>
-        </View>
-    )
+const DetailsDeel = ({ details }) => {
+  const [more, setMore] = useState(false)
+  return (
+    <View>
+      <Text numberOfLines={more ? 30 : 2}
+        ellipsizeMode='tail'
+      >
+        {details}
+      </Text>
+      <TouchableHighlight onPress={() => {
+        setMore(!more)
+      }}>
+        <Text style={{ color: 'gray', fontSize: 13 }} uppercase={false}>
+          {more ? 'less' : 'Show more...'}
+        </Text>
+      </TouchableHighlight>
+    </View>
+  )
 }
 import { formatRelative, formatDistance, subDays } from 'date-fns'
 import { he } from 'date-fns/locale'
 
-const renderDate = () => {
-    // var date = Date.now();
-    // var formattedDate = format(date, "MMMM d, yyyy");
-    // var date2 = new Date('2020-01-23');
-    // console.log(formattedDate);
-
-
-    const datef = formatRelative(subDays(new Date(), 3), new Date(), { locale: he })
-    // console.log(datef);
-    return datef
-
+const renderDate = (date) => {
+  const datef = formatRelative(new Date(parseInt(date)), new Date(), { locale: he })
+  return datef
 }
 export default MyCard;
