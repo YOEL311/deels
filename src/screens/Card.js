@@ -57,7 +57,7 @@ const MyCard = ({ data }) => {
         <CardItem>
           <Left>
             <Button transparent>
-              <Icon
+              <Icon style={{paddingLeft:15,paddingRight:15}}
                 onPress={() => {
                   onShare()
                   console.log('on prees share')

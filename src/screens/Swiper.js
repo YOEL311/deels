@@ -5,6 +5,7 @@ import SwiperFlatList from 'react-native-swiper-flatlist';
 
 const renderImages = (images) => {
 
+
   let swipImages = images.map((currImg) => {
     return (
       <View >
@@ -19,7 +20,11 @@ const renderImages = (images) => {
   })
   return swipImages;
 }
+// export default class App extends PureComponent {
+  // constractor(props){
 
+  // }
+  // return()
 const Swiper = ({ images }) => {
   return (
     <View style={styles.container}>
