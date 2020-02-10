@@ -31,22 +31,35 @@ export default class Notifi extends Component {
     async    componentDidMount() {
         console.log("componeent did");
 
-        // firebase.initializeApp();
-        const enabled = await firebase.messaging().hasPermission();
-        if (enabled) {
-            console.log("good hasPermission");
-            // user has permissions
-        } else {
-            console.log("not hasPermission");
+        // // firebase.initializeApp();
+        // const enabled = await firebase.messaging().hasPermission();
+        // if (enabled) {
+        //     console.log("good hasPermission");
+        //     // user has permissions
+        // } else {
+        //     console.log("not hasPermission");
 
-            // user doesn't have permission
+        //     // user doesn't have permission
+        // }
+
+        try {
+            
+            this.getToken();
+        } catch (error) {
+            console.log(error);
+        }
+        try {
+            this.checkPermission()
+        } catch (error) {
+            console.log(error);
         }
 
-        this.getToken();
-        this.checkPermission()
-
-
-
+try {
+    this.writeUserData("ios","ios2","10s3sdfghj")
+} catch (error) {
+    console.log(error);
+    
+}
 
 
 
@@ -54,7 +67,19 @@ export default class Notifi extends Component {
 
 
     }
-
+    writeUserData(email, fname, lname) {
+        firebase.database().ref('Users/').set({
+            email,
+            fname,
+            lname
+        }).then((data) => {
+            //success callback
+            console.log('data ', data)
+        }).catch((error) => {
+            //error callback
+            console.log('error ', error)
+        })
+    }
     render() {
         return (
             <View></View>
