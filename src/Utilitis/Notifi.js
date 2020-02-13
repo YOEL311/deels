@@ -4,7 +4,16 @@ import { View, AsyncStorages, Alert } from 'react-native';
 
 export default class Notifi extends Component {
     // state = {}
+    requestPermission = async () => {
+        try {
+         await firebase.messaging().requestPermission();
+         // User has authorised
+        } catch (error) {
+          // User has rejected permissions
+        }
+       }
 
+       
     async checkPermission() {
         const enabled = await firebase.messaging().hasPermission();
         if (enabled) {
@@ -23,6 +32,8 @@ export default class Notifi extends Component {
             fcmToken = await firebase.messaging().getToken();
             if (fcmToken) {
                 console.log('fcmToken:', fcmToken);
+                this.writeUserData(fcmToken, "ijhjk", "אאאאאאאא")
+
                 // await AsyncStorage.setItem('fcmToken', fcmToken);
             }
         }
@@ -97,7 +108,7 @@ export default class Notifi extends Component {
         // }
 
         // try {
-        this.writeUserData("ios", "ios2", "10s3sdfghj")
+        this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
         // } catch (error) {
         //     console.log(error);
 
