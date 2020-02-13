@@ -32,34 +32,33 @@ export default class Notifi extends Component {
         console.log("componeent did");
 
         // // firebase.initializeApp();
-        // const enabled = await firebase.messaging().hasPermission();
-        // if (enabled) {
-        //     console.log("good hasPermission");
-        //     // user has permissions
-        // } else {
-        //     console.log("not hasPermission");
+        const enabled = await firebase.messaging().hasPermission();
+        if (enabled) {
+            console.log("good hasPermission");
+            // user has permissions
+        } else {
+            console.log("not hasPermission");
 
-        //     // user doesn't have permission
+            // user doesn't have permission
+        }
+
+        // try {
+        // this.getToken();
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        // try {
+        this.checkPermission()
+        // } catch (error) {
+        //     console.log(error);
         // }
 
-        try {
-            
-            this.getToken();
-        } catch (error) {
-            console.log(error);
-        }
-        try {
-            this.checkPermission()
-        } catch (error) {
-            console.log(error);
-        }
+        // try {
+        this.writeUserData("ios", "ios2", "10s3sdfghj")
+        // } catch (error) {
+        //     console.log(error);
 
-try {
-    this.writeUserData("ios","ios2","10s3sdfghj")
-} catch (error) {
-    console.log(error);
-    
-}
+        // }
 
 
 
