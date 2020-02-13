@@ -8,6 +8,7 @@ import {
 } from 'native-base';
 import MyCard from './Card';
 import data from '../data.js'
+import Notifi from '../Utilitis/Notifi'
 export default class DellsScreen extends Component {
 
   renderCards = () => {
@@ -25,9 +26,10 @@ export default class DellsScreen extends Component {
         {/* <Header /> */}
         <Content>
           <ScrollView>
-
+            <Notifi />
             {this.renderCards()}
           </ScrollView>
+
         </Content>
       </Container >
     );

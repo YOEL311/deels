@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "927481565824",
+    "firebase_url": "https://deels-266720.firebaseio.com",
+    "project_id": "deels-266720",
+    "storage_bucket": "deels-266720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927481565824:android:c5f6d468e8530731db4c65",
+        "android_client_info": {
+          "package_name": "com.deel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927481565824-n55d1gog2abemf3mt6i3aa2l5tgftbqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzjkQPwiSEWIqVTgPqUVv5RijPU7vnW_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927481565824-n55d1gog2abemf3mt6i3aa2l5tgftbqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
