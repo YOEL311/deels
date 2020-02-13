@@ -1,14 +1,14 @@
-/* eslint-disable prettier/prettier */
 import React, { PureComponent } from 'react';
-import { Dimensions, Image, StyleSheet, View } from 'react-native';
+import { Text, Dimensions, Image, StyleSheet, View } from 'react-native';
+
 import SwiperFlatList from 'react-native-swiper-flatlist';
 
+
 const renderImages = (images) => {
-
-
+  // console.log("render", images);
   let swipImages = images.map((currImg) => {
     return (
-      <View >
+      <View  key={currImg.uri}>
         <Image
           source={{
             uri: currImg.uri
@@ -20,28 +20,30 @@ const renderImages = (images) => {
   })
   return swipImages;
 }
-// export default class App extends PureComponent {
-  // constractor(props){
 
-  // }
-  // return()
-const Swiper = ({ images }) => {
-  return (
-    <View style={styles.container}>
-      <SwiperFlatList
-        autoplay
-        autoplayDelay={5}
-        autoplayLoop
-        index={1}
-        showPagination
-      >
-        {renderImages(images)}
-      </SwiperFlatList>
-    </View>
-  );
+export default class App extends PureComponent {
 
+  constructor(props) {
+    super(props)
+    // console.log(props);
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        <SwiperFlatList
+          autoplay
+          autoplayDelay={2}
+          autoplayLoop
+          index={2}
+          showPagination
+        >
+          {renderImages(this.props.images)}
+        </SwiperFlatList>
+      </View>
+    );
+  }
 }
-export default Swiper
+
 
 const { width, height } = Dimensions.get('window');
 
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
   },
   child: {
     height: height * 0.4,
-    width: width * 0.91,
+    width: width -38,
     justifyContent: 'center',
     // resizeMode: 'contain',
     // borderRadius: height * 0.4,

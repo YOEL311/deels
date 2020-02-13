@@ -12,6 +12,7 @@ import {
   Body,
 } from 'native-base';
 import Swiper from './Swiper';
+import Swiper2 from './Swiper';
 import { Share } from "react-native"
 import { format } from "date-fns";
 
@@ -51,7 +52,7 @@ const MyCard = ({ data }) => {
           </Left>
         </CardItem>
         <CardItem>
-          <Swiper images={data.images} />
+          <Swiper2 images={data.images} />
         </CardItem>
 
         <CardItem>
