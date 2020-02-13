@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from "react-native-firebase";
-import { View, AsyncStorages } from 'react-native';
+import { View, AsyncStorages, Alert } from 'react-native';
 
 export default class Notifi extends Component {
     // state = {}
@@ -13,6 +13,7 @@ export default class Notifi extends Component {
             this.requestPermission();
         }
     }
+
 
     //Get Device Registration Token
     async getToken() {
@@ -27,9 +28,51 @@ export default class Notifi extends Component {
         }
     }
 
+    messageListener = async () => {
+        this.notificationListener = firebase.notifications().onNotification((notification) => {
+            const { title, body } = notification;
+            console.log("1");
+            this.showAlert(title, body);
+        });
+
+        this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen) => {
+            const { title, body } = notificationOpen.notification;
+            console.log(notificationOpen);
+            console.log("2");
+
+            this.showAlert(title, body);
+        });
+
+        const notificationOpen = await firebase.notifications().getInitialNotification();
+        if (notificationOpen) {
+            const { title, body } = notificationOpen.notification;
+            console.log("3");
+
+            this.showAlert(title, body);
+        }
+
+        this.messageListener = firebase.messaging().onMessage((message) => {
+            console.log("4");
+            console.log(JSON.stringify(message));
+        });
+    }
+
+    showAlert = (title, message) => {
+        Alert.alert(
+            title,
+            message,
+            [
+                { text: 'OK', onPress: () => console.log('OK Pressed') },
+            ], { cancelable: false },
+        )
+    }
+
+
 
     async    componentDidMount() {
         console.log("componeent did");
+
+        this.messageListener()
 
         // // firebase.initializeApp();
         const enabled = await firebase.messaging().hasPermission();
@@ -65,6 +108,9 @@ export default class Notifi extends Component {
 
 
 
+    }
+    componentWillUnmount() {
+        this.messageListener();
     }
     writeUserData(email, fname, lname) {
         firebase.database().ref('Users/').set({
