@@ -39,7 +39,8 @@ const DrawerNavigatorConfig = {
   // drawerPosition: 'right',
   drawerType: 'slide',
   headerMode: 'float',
-  intialRouteName: 'DetailsScreen',
+  // intialRouteName: 'DetailsScreen',
+  // intialRouteName: 'HomeScreen',
   drawerType: 'slide',
   // drawerWidth: 190,
   // overlayColor: 0,
@@ -57,4 +58,19 @@ const StackNavigatorConfig2 = {
 }
 
 const AppStack = createStackNavigator(StackRouteConfigs, StackNavigatorConfig2);
-export default createAppContainer(AppStack);
+// export default createAppContainer(AppStack);
+
+
+
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from '../Reducers/reducer'
+const store = createStore(reducer);
+const AppContainer = createAppContainer(AppStack);
+
+
+export default RNRedux = () => (
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>
+)

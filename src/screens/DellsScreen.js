@@ -1,15 +1,12 @@
-/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import {
-  Container,
-  Header,
-  Content,
+  Container, Content
 } from 'native-base';
 import MyCard from './Card';
 import data from '../data.js'
 import Notifi from '../Utilitis/Notifi'
-export default class DellsScreen extends Component {
+class DellsScreen extends Component {
 
   renderCards = () => {
     let cards = data.map((curr) => {
@@ -29,9 +26,16 @@ export default class DellsScreen extends Component {
             <Notifi />
             {this.renderCards()}
           </ScrollView>
-
         </Content>
       </Container >
     );
   }
 }
+
+import { connect } from 'react-redux';
+const mapStateToProps = () => {
+  // const { friends } = state || "hkjh"
+  return ({ sss: "ssgs " })
+};
+
+export default connect(mapStateToProps)(DellsScreen);

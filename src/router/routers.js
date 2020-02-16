@@ -47,3 +47,16 @@ export default RouteConfigs = {
         }
     },
 };
+
+
+
+
+
+// export default RouteConfigs = {
+//     HomeScreen: {//Title
+//         screen: DeelScreen,
+//         navigationOptions: {
+//             drawerLabel: "הדילים שלנו"
+//         }
+//     },
+// }

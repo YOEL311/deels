@@ -6,14 +6,14 @@ export default class Notifi extends Component {
     // state = {}
     requestPermission = async () => {
         try {
-         await firebase.messaging().requestPermission();
-         // User has authorised
+            await firebase.messaging().requestPermission();
+            // User has authorised
         } catch (error) {
-          // User has rejected permissions
+            // User has rejected permissions
         }
-       }
+    }
 
-       
+
     async checkPermission() {
         const enabled = await firebase.messaging().hasPermission();
         if (enabled) {
@@ -33,7 +33,6 @@ export default class Notifi extends Component {
             if (fcmToken) {
                 console.log('fcmToken:', fcmToken);
                 this.writeUserData(fcmToken, "ijhjk", "אאאאאאאא")
-
                 // await AsyncStorage.setItem('fcmToken', fcmToken);
             }
         }
@@ -80,45 +79,18 @@ export default class Notifi extends Component {
 
 
 
-    async    componentDidMount() {
+    async componentDidMount() {
         console.log("componeent did");
-
         this.messageListener()
-
-        // // firebase.initializeApp();
         const enabled = await firebase.messaging().hasPermission();
         if (enabled) {
             console.log("good hasPermission");
-            // user has permissions
         } else {
             console.log("not hasPermission");
-
-            // user doesn't have permission
         }
 
-        // try {
-        // this.getToken();
-        // } catch (error) {
-        //     console.log(error);
-        // }
-        // try {
         this.checkPermission()
-        // } catch (error) {
-        //     console.log(error);
-        // }
-
-        // try {
         this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
-        // } catch (error) {
-        //     console.log(error);
-
-        // }
-
-
-
-
-
-
     }
     componentWillUnmount() {
         this.messageListener();
