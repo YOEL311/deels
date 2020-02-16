@@ -20,18 +20,7 @@ export const CustomDrawer = props => {
             </ScrollView>
 
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
-                <View style={{ justifyContent: 'center', padding: 20 }}>
-                    <IconSimple style={styles.iconStyle}
-                        onPress={() => props.navigation.closeDrawer()}
-                        name="logout"
-                        color={'gray'}
-                        size={30}
-                        onPress={() => toGoOut()}
-                    />
-                    <Text style={styles.textIconStyle}>
-                        LogOut
-                    </Text>
-                </View>
+                {btnToggleLogInOut()}
 
                 <View style={{ justifyContent: 'center', padding: 20 }}>
                     <IconSimpleLine style={styles.iconStyle}
@@ -45,6 +34,7 @@ export const CustomDrawer = props => {
                 </Text>
                 </View>
             </View>
+
         </View>
     );
 };
@@ -58,3 +48,22 @@ const styles = StyleSheet.create({
         fontSize: 20
     }
 })
+
+import { useState } from 'react';
+
+const btnToggleLogInOut = () => {
+    const [isLogIn, setIsLogIn] = useState(false)
+    return (
+        <View style={{ justifyContent: 'center', padding: 20 }}>
+            <IconSimple style={styles.iconStyle}
+                name={isLogIn ? "logout" : "login"}
+                color={'gray'}
+                size={30}
+                onPress={() => { setIsLogIn(!isLogIn) }}
+            />
+            <Text style={styles.textIconStyle}>
+                {isLogIn ? "logOut" : "logIn"}
+            </Text>
+        </View>
+    )
+}

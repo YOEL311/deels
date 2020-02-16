@@ -58,7 +58,7 @@ const MyCard = ({ data }) => {
         <CardItem>
           <Left>
             <Button transparent>
-              <Icon style={{paddingLeft:15,paddingRight:15}}
+              <Icon style={{ paddingLeft: 15, paddingRight: 15 }}
                 onPress={() => {
                   onShare()
                   console.log('on prees share')
@@ -84,9 +84,9 @@ const DetailsDeel = ({ details }) => {
       >
         {details}
       </Text>
-      <TouchableHighlight onPress={() => {
-        setMore(!more)
-      }}>
+      <TouchableHighlight
+        onPress={() => { setMore(!more) }}
+      >
         <Text style={{ color: 'gray', fontSize: 13 }} uppercase={false}>
           {more ? 'less' : 'Show more...'}
         </Text>
