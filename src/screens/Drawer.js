@@ -5,7 +5,8 @@ import IconAnt from "react-native-vector-icons/AntDesign";
 import IconSimple from "react-native-vector-icons/SimpleLineIcons";
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons';
 import toGoOut from './LogOut'
- const CustomDrawer = props => {
+const CustomDrawer = props => {
+    console.log(props.user)
     return (
         <View style={{ flex: 1, backgroundColor: 'rgba(27, 31,35, 0.1)' }}>
             <IconAnt
@@ -20,8 +21,7 @@ import toGoOut from './LogOut'
             </ScrollView>
 
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
-                {btnToggleLogInOut()}
-
+                {btnToggleLogInOut(props)}
                 <View style={{ justifyContent: 'center', padding: 20 }}>
                     <IconSimpleLine style={styles.iconStyle}
                         name="settings"
@@ -34,7 +34,6 @@ import toGoOut from './LogOut'
                 </Text>
                 </View>
             </View>
-
         </View>
     );
 };
@@ -51,26 +50,35 @@ const styles = StyleSheet.create({
 
 import { useState } from 'react';
 
-const btnToggleLogInOut = () => {
+const btnToggleLogInOut = (props) => {
+
+    const toogleBtn = (props.user === null) ? "login" : "logout"
+    console.log(toogleBtn)
+    console.log("props", props)
+    console.log("props user", props.user)
     const [isLogIn, setIsLogIn] = useState(false)
+
     return (
         <View style={{ justifyContent: 'center', padding: 20 }}>
             <IconSimple style={styles.iconStyle}
-                name={isLogIn ? "logout" : "login"}
+                name={toogleBtn}
                 color={'gray'}
                 size={30}
-                onPress={() => { setIsLogIn(!isLogIn) }}
+                onPress={() => { }}
             />
             <Text style={styles.textIconStyle}>
-                {isLogIn ? "logOut" : "logIn"}
+                {toogleBtn}
             </Text>
         </View>
     )
 }
 
 import { connect } from 'react-redux';
-const mapStateToProps = () => {
-    // const { friends } = state || "hkjh"
-    return ({ sss: "ssgs " })
+const mapStateToProps = (state) => {
+    const { error, loading, user } = state.auth;
+    console.log("state", state)
+    return { error, loading, user };
+    // return ({ "ss": "ss" })
 };
+
 export default connect(mapStateToProps)(CustomDrawer);

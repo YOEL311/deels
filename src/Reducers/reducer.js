@@ -1,9 +1,22 @@
 import { combineReducers } from 'redux';
+import {
+    LOGIN_USER_SUCCESS,
+    LOGIN_USER_FAIL,
+    LOGIN_USER
+} from "../actions/types";
 
-const INITIAL_STATE = { a: "ss", b: "jhihjk" }
-const friendReducer = (state = INITIAL_STATE, action) => {
+const INITIAL_STATE = {
+    email: "",
+    password: "",
+    user: null,
+    loading: false,
+    error: ""
+};
+
+// const INITIAL_STATE = { isLogin: false }
+const loginReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case 'ADD_FRIEND': {
+        case 'LOGIN': {
             return INITIAL_STATE;
         }
         default:
@@ -11,6 +24,4 @@ const friendReducer = (state = INITIAL_STATE, action) => {
     }
 };
 
-export default combineReducers({
-    friends: friendReducer,
-});
+export default loginReducer;
