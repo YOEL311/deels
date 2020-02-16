@@ -5,7 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import RouteConfigs from '../router/routers'
 import Icon from "react-native-vector-icons/Entypo";
-import { CustomDrawer } from './Drawer'
+import CustomDrawer from './Drawer'
 
 const navigationOptionsHeader = ({ navigation }) => {
   return {
