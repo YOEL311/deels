@@ -63,9 +63,12 @@ const AppStack = createStackNavigator(StackRouteConfigs, StackNavigatorConfig2);
 
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from "redux";
+
 import reducer from '../Reducers'
-const store = createStore(reducer);
+import ReduxThunk from "redux-thunk";
+
+const store = createStore(reducer, applyMiddleware(ReduxThunk));
 const AppContainer = createAppContainer(AppStack);
 
 

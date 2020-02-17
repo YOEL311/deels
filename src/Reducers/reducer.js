@@ -15,6 +15,7 @@ const INITIAL_STATE = {
 
 // const INITIAL_STATE = { isLogin: false }
 const loginReducer = (state = INITIAL_STATE, action) => {
+    console.log("reducer", action.type);
     switch (action.type) {
         case 'LOGIN': {
             return INITIAL_STATE;

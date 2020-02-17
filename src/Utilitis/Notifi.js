@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import firebase from "react-native-firebase";
 import { View, AsyncStorages, Alert } from 'react-native';
+// import firebase from 'react-native-firebase'
 
 export default class Notifi extends Component {
     // state = {}
+
+    // state = { email: '', password: '', errorMessage: null }
+    handleSignUp = () => {
+        // firebase
+        //     .auth()
+        //     .createUserWithEmailAndPassword("yoel301@gmail.com", "123456")
+        //     .then(() => console.log("succes"))
+        //     .catch(error => console.log("er", error))
+    }
+
+
+
+
     requestPermission = async () => {
         try {
             await firebase.messaging().requestPermission();
@@ -81,19 +95,16 @@ export default class Notifi extends Component {
 
     async componentDidMount() {
         console.log("componeent did");
-        this.messageListener()
-        const enabled = await firebase.messaging().hasPermission();
-        if (enabled) {
-            console.log("good hasPermission");
-        } else {
-            console.log("not hasPermission");
-        }
+        // this.messageListener()
 
-        this.checkPermission()
-        this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
+
+
+        this.handleSignUp()
+        // this.checkPermission()
+        // this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
     }
     componentWillUnmount() {
-        this.messageListener();
+        D   // this.messageListener();
     }
     writeUserData(email, fname, lname) {
         firebase.database().ref('Users/').set({

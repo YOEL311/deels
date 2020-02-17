@@ -5,8 +5,9 @@ import IconAnt from "react-native-vector-icons/AntDesign";
 import IconSimple from "react-native-vector-icons/SimpleLineIcons";
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons';
 import toGoOut from './LogOut'
+import { loginUser } from '../actions/index'
 const CustomDrawer = props => {
-    console.log(props.user)
+    // console.log(props.user)
     return (
         <View style={{ flex: 1, backgroundColor: 'rgba(27, 31,35, 0.1)' }}>
             <IconAnt
@@ -53,9 +54,9 @@ import { useState } from 'react';
 const btnToggleLogInOut = (props) => {
 
     const toogleBtn = (props.user === null) ? "login" : "logout"
-    console.log(toogleBtn)
-    console.log("props", props)
-    console.log("props user", props.user)
+    // console.log(toogleBtn)
+    // console.log("props", props)
+    // console.log("props user", props.user)
     const [isLogIn, setIsLogIn] = useState(false)
 
     return (
@@ -64,7 +65,7 @@ const btnToggleLogInOut = (props) => {
                 name={toogleBtn}
                 color={'gray'}
                 size={30}
-                onPress={() => { }}
+                onPress={() => { props.loginUser({ email: "nofarn100@gmail.com", password: "123456" }) }}
             />
             <Text style={styles.textIconStyle}>
                 {toogleBtn}
@@ -76,9 +77,9 @@ const btnToggleLogInOut = (props) => {
 import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
     const { error, loading, user } = state.auth;
-    console.log("state", state)
+    // console.log("state", state)
     return { error, loading, user };
     // return ({ "ss": "ss" })
 };
 
-export default connect(mapStateToProps)(CustomDrawer);
+export default connect(mapStateToProps, { loginUser })(CustomDrawer);

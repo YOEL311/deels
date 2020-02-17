@@ -15,6 +15,8 @@ import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage; // <-
 import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import io.invertase.firebase.database.RNFirebaseDatabasePackage;
 
+import io.invertase.firebase.auth.RNFirebaseAuthPackage;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -34,6 +36,9 @@ public class MainApplication extends Application implements ReactApplication {
       packages.add(new RNFirebaseNotificationsPackage());
       packages.add(new RNFirebaseMessagingPackage());
       packages.add(new RNFirebaseDatabasePackage());
+      packages.add(new RNFirebaseAuthPackage());
+
+      
       return packages;
     }
 
