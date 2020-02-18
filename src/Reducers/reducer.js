@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import {
     LOGIN_USER_SUCCESS,
     LOGIN_USER_FAIL,
-    LOGIN_USER
+    LOGIN_USER,
+    LOGOUT_USER_SUCCESS
 } from "../actions/types";
 
 const INITIAL_STATE = {
@@ -17,8 +18,14 @@ const INITIAL_STATE = {
 const loginReducer = (state = INITIAL_STATE, action) => {
     console.log("reducer", action.type);
     switch (action.type) {
-        case 'LOGIN': {
+        case 'LOGIN_USER': {
             return INITIAL_STATE;
+        }
+        case LOGIN_USER_SUCCESS: {
+            return { ...state, user: action.payload };
+        }
+        case LOGOUT_USER_SUCCESS: {
+            return { ...state, user: null };
         }
         default:
             return state;

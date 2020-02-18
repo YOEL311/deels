@@ -5,7 +5,7 @@ import IconAnt from "react-native-vector-icons/AntDesign";
 import IconSimple from "react-native-vector-icons/SimpleLineIcons";
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons';
 import toGoOut from './LogOut'
-import { loginUser } from '../actions/index'
+import { loginUser, logOUtUser } from '../actions'
 const CustomDrawer = props => {
     // console.log(props.user)
     return (
@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
         padding: 20
     },
     textIconStyle: {
+        justifyContent: 'center',
+        alignSelf: 'center',
         color: 'gray',
         fontSize: 20
     }
@@ -52,20 +54,23 @@ const styles = StyleSheet.create({
 import { useState } from 'react';
 
 const btnToggleLogInOut = (props) => {
-
     const toogleBtn = (props.user === null) ? "login" : "logout"
-    // console.log(toogleBtn)
-    // console.log("props", props)
-    // console.log("props user", props.user)
-    const [isLogIn, setIsLogIn] = useState(false)
-
     return (
         <View style={{ justifyContent: 'center', padding: 20 }}>
             <IconSimple style={styles.iconStyle}
                 name={toogleBtn}
                 color={'gray'}
                 size={30}
-                onPress={() => { props.loginUser({ email: "nofarn100@gmail.com", password: "123456" }) }}
+                onPress={() => {
+                    if (props.user === null)
+                        return (
+                            props.loginUser({ email: "nofarn100@gmail.com", password: "123456" })
+                        )
+                    else
+                        return (
+                            props.logOUtUser()
+                        )
+                }}
             />
             <Text style={styles.textIconStyle}>
                 {toogleBtn}
@@ -77,9 +82,8 @@ const btnToggleLogInOut = (props) => {
 import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
     const { error, loading, user } = state.auth;
-    // console.log("state", state)
+    console.log("state", user)
     return { error, loading, user };
-    // return ({ "ss": "ss" })
 };
 
-export default connect(mapStateToProps, { loginUser })(CustomDrawer);
+export default connect(mapStateToProps, { loginUser, logOUtUser })(CustomDrawer);
