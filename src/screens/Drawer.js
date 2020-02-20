@@ -23,7 +23,8 @@ const CustomDrawer = props => {
           size={30}
         />
 
-        <Text>
+        <Text
+          style={{fontSize: 15, alignSelf: 'center', paddingHorizontal: 20}}>
           שלום {props.user !== null ? props.user.user.displayName : 'אורח'}
         </Text>
       </View>
