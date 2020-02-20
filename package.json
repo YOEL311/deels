@@ -30,10 +30,11 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@react-native-community/cli-platform-android": "3.0.2",
     "@babel/core": "^7.8.3",
     "@babel/runtime": "^7.8.3",
+    "@react-native-community/cli-platform-android": "3.0.2",
     "@react-native-community/eslint-config": "^0.0.6",
+    "@react-native-community/eslint-plugin": "^1.0.0",
     "babel-jest": "^24.9.0",
     "eslint": "^6.8.0",
     "jest": "^24.9.0",
