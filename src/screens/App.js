@@ -77,8 +77,17 @@ import ReduxThunk from 'redux-thunk';
 export const store = createStore(reducer, applyMiddleware(ReduxThunk));
 const AppContainer = createAppContainer(AppStack);
 
+// import {NavigationContainer} from '@react-navigation/native';
+// import {navigationRef} from './RootNavigation';
+
+import {navigate, setNavigator} from './RootNavigation';
+
 export default RNRedux = () => (
   <Provider store={store}>
-    <AppContainer />
+    <AppContainer
+      ref={navigator => {
+        setNavigator(navigator);
+      }}
+    />
   </Provider>
 );

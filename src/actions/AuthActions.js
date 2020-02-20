@@ -8,8 +8,8 @@ import {
 } from './types';
 import firebase from 'react-native-firebase';
 import Toast from 'react-native-simple-toast';
+import * as RootNavigation from '../../src/screens/RootNavigation';
 
-// import { Actions } from "react-native-router-flux";
 export const logOUtUser = () => {
   return dispatch => {
     // dispatch({ type: LOGOUT_USER });
@@ -27,7 +27,7 @@ export const logOUtUser = () => {
   };
 };
 
-export const loginUser = (email = '-', password = '-', name) => {
+export const loginUser = (email, password, name) => {
   console.log('login');
   console.log(email, password);
   return dispatch => {
@@ -70,13 +70,10 @@ const loginUserFail = dispatch => {
 const logoutUserFail = dispatch => {
   dispatch({type: LOGOUT_USER_FAIL});
 };
-import {CommonActions} from '@react-navigation/native';
 
 const loginUserSuccess = (dispatch, user) => {
-  // Toast.show('This is a toast.');
-  // CommonActions.goBack();
+  RootNavigation.navigate('HomeScreen');
   Toast.show('login success', Toast.LONG);
-  // navigation.popToTop();
   dispatch({
     type: LOGIN_USER_SUCCESS,
     payload: user,
@@ -85,9 +82,7 @@ const loginUserSuccess = (dispatch, user) => {
 
 const logoutUserSuccess = dispatch => {
   console.log('logout user Action');
-  // return { type: LOGOUT_USER_SUCCESS }
   Toast.show('logOut success', Toast.LONG);
-
   dispatch({
     type: LOGOUT_USER_SUCCESS,
   });
