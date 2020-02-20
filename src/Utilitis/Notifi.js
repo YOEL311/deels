@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import firebase from 'react-native-firebase';
-import { View, Alert } from 'react-native';
+import {View, Alert} from 'react-native';
 // import firebase from 'react-native-firebase'
 
 export default class Notifi extends Component {
@@ -51,7 +51,7 @@ export default class Notifi extends Component {
     this.notificationListener = firebase
       .notifications()
       .onNotification(notification => {
-        const { title, body } = notification;
+        const {title, body} = notification;
         console.log('1');
         this.showAlert(title, body);
       });
@@ -59,7 +59,7 @@ export default class Notifi extends Component {
     this.notificationOpenedListener = firebase
       .notifications()
       .onNotificationOpened(notificationOpen => {
-        const { title, body } = notificationOpen.notification;
+        const {title, body} = notificationOpen.notification;
         console.log(notificationOpen);
         console.log('2');
 
@@ -70,7 +70,7 @@ export default class Notifi extends Component {
       .notifications()
       .getInitialNotification();
     if (notificationOpen) {
-      const { title, body } = notificationOpen.notification;
+      const {title, body} = notificationOpen.notification;
       console.log('3');
 
       this.showAlert(title, body);
@@ -86,8 +86,8 @@ export default class Notifi extends Component {
     Alert.alert(
       title,
       message,
-      [{ text: 'OK', onPress: () => console.log('OK Pressed') }],
-      { cancelable: false },
+      [{text: 'OK', onPress: () => console.log('OK Pressed')}],
+      {cancelable: false},
     );
   };
 

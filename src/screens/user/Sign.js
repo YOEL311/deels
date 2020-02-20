@@ -8,8 +8,9 @@ export class LoginView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'nofarn100@gmail.com',
+      email: 'nofarn100@gmail.com', //TODO
       password: '123456',
+      name: 'nofar',
     };
   }
 
@@ -17,8 +18,8 @@ export class LoginView extends Component {
     Alert.alert('Alert', 'Button pressed ' + viewId);
   };
   login() {
-    const {email, password} = this.state;
-    this.props.loginUser(email, password);
+    const {email, password, name} = this.state;
+    this.props.loginUser(email, password, name);
   }
 
   render() {
@@ -27,7 +28,7 @@ export class LoginView extends Component {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.inputs}
-            // placeholder="Email"
+            // placeholder="Email"//TODO
             placeholder="nofarn100@gmail.com"
             keyboardType="email-address"
             underlineColorAndroid="transparent"
@@ -39,10 +40,20 @@ export class LoginView extends Component {
           <TextInput
             style={styles.inputs}
             // placeholder="Password"
-            placeholder="123456"
+            placeholder="123456" //TODO
             secureTextEntry={true}
             underlineColorAndroid="transparent"
             onChangeText={password => this.setState({password})}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.inputs}
+            placeholder="Your Name"
+            secureTextEntry={true}
+            underlineColorAndroid="transparent"
+            onChangeText={name => this.setState({name})}
           />
         </View>
 
@@ -50,9 +61,7 @@ export class LoginView extends Component {
           style={[styles.buttonContainer, styles.loginButton]}
           onPress={() => {
             this.login();
-          }}
-          // this.onClickListener('login')}>
-        >
+          }}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableHighlight>
 
@@ -66,8 +75,7 @@ export class LoginView extends Component {
 
         <TouchableHighlight
           style={styles.buttonContainer}
-          // this.props.navigation.navigate('RegistarScreen')}
-          onPress={() => this.onClickListener('register')}>
+          onPress={() => this.props.navigation.navigate('RegistarScreen')}>
           <Text>Register</Text>
         </TouchableHighlight>
       </View>

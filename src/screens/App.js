@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import {StyleSheet} from 'react-native';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+import {createDrawerNavigator} from 'react-navigation-drawer';
 import RouteConfigs from '../router/routers';
 import Icon from 'react-native-vector-icons/Entypo';
 import CustomDrawer from './Drawer';
 
-const navigationOptionsHeader = ({ navigation }) => {
+const navigationOptionsHeader = ({navigation}) => {
   return {
     drawerBackgroundColor: '#f4f5f8',
     headerTitle: () => null,
@@ -23,7 +23,7 @@ const navigationOptionsHeader = ({ navigation }) => {
 
     headerLeft: () => (
       <Icon
-        style={{ padding: 10 }}
+        style={{padding: 10}}
         onPress={() => {
           navigation.toggleDrawer();
         }}
@@ -68,8 +68,8 @@ const StackNavigatorConfig2 = {
 const AppStack = createStackNavigator(StackRouteConfigs, StackNavigatorConfig2);
 // export default createAppContainer(AppStack);
 
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
 
 import reducer from '../Reducers';
 import ReduxThunk from 'redux-thunk';
@@ -81,4 +81,4 @@ export default RNRedux = () => (
   <Provider store={store}>
     <AppContainer />
   </Provider>
-)
+);

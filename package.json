@@ -21,6 +21,7 @@
     "react-native-router-flux": "^4.2.0",
     "react-native-safe-area-context": "^0.6.2",
     "react-native-screens": "^2.0.0-alpha.25",
+    "react-native-simple-toast": "^1.0.0",
     "react-native-swiper-flatlist": "^2.0.3",
     "react-navigation": "^4.0.10",
     "react-navigation-drawer": "^2.3.3",
