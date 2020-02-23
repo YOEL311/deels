@@ -24,8 +24,12 @@ const CustomDrawer = props => {
         />
 
         <Text
-          style={{fontSize: 15, alignSelf: 'center', paddingHorizontal: 20}}>
-          שלום {props.user !== null ? props.user.user.displayName : 'אורח'}
+          style={{
+            fontSize: 20,
+            alignSelf: 'center',
+            paddingHorizontal: 20,
+          }}>
+          שלום {props.user !== null ? props?.user?.user?.displayName : 'אורח'}
         </Text>
       </View>
 
@@ -91,7 +95,7 @@ import {connect} from 'react-redux';
 const mapStateToProps = state => {
   const {error, loading, user} = state.auth;
   console.log('state', user);
-  user && console.log(user.user.displayName);
+  user && console.log(user?.user?.displayName);
   return {error, loading, user};
 };
 

@@ -3,21 +3,21 @@ import DetailsScreen from '../screens/DetailsScreen';
 import SettingScreen from '../screens/SettingScreen';
 import DeelScreen from '../screens/DellsScreen';
 import SignScreen from '../screens/user/Sign';
+import SignScreen2 from '../screens/user/Sign2';
 import RegistarScreen from '../screens/user/Registar';
 import ForgotPasswordScreen from '../screens/user/ForgotPassword';
 
 import {store} from '../screens/App';
 
-const getIsLogin = label =>
+const getLabelIsLogin = label =>
   function aFunction() {
-    // function aFunction() {
-    let user = store.getState().auth.user;
+    let user = store?.getState().auth.user;
     let result = user === null ? () => null : label;
     console.log('label', label);
     return result;
   };
 
-export default RouteConfigs = {
+const RouteConfigs = {
   HomeScreen: {
     //Title
     screen: DeelScreen,
@@ -66,7 +66,17 @@ export default RouteConfigs = {
   SignScreen: {
     screen: SignScreen,
     navigationOptions: {
-      drawerLabel: getIsLogin('כניסה'),
+      // drawerLabel: getLabelIsLogin('כניסה'),
+      drawerLabel: 'כניסה 1',
+    },
+  },
+
+  SignScreen2: {
+    screen: SignScreen2,
+    navigationOptions: {
+      // drawerLabel: getLabelIsLogin('כניסה'),
+      // drawerLabel: aa('כניסה'),
+      drawerLabel: 'כניסה  הוקס',
     },
   },
 
@@ -84,3 +94,4 @@ export default RouteConfigs = {
     },
   },
 };
+export default RouteConfigs;

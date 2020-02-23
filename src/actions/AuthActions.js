@@ -31,7 +31,7 @@ export const loginUser = (email, password, name) => {
   console.log('login');
   console.log(email, password);
   return dispatch => {
-    console.log(dispatch);
+    // console.log(dispatch);
     dispatch({type: LOGIN_USER});
     firebase
       .auth()
@@ -53,6 +53,16 @@ export const loginUser = (email, password, name) => {
           .createUserWithEmailAndPassword(email, password)
           .then(user => {
             console.log('succes create', user);
+            loginUserSuccess(dispatch, user);
+          })
+          .then(user => {
+            firebase.auth().currentUser.updateProfile({
+              displayName: name,
+            });
+            return user;
+          })
+          .then(user => {
+            console.log('then2', user);
             loginUserSuccess(dispatch, user);
           })
           .catch(() => {

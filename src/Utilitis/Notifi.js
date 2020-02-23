@@ -96,11 +96,11 @@ export default class Notifi extends Component {
     // this.messageListener()
 
     this.handleSignUp();
-    // this.checkPermission()
+    // this.checkPermission();
     // this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
   }
   componentWillUnmount() {
-    D; // this.messageListener();
+    // this.messageListener();
   }
   writeUserData(email, fname, lname) {
     firebase
