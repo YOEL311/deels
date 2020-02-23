@@ -10,7 +10,7 @@ import firebase from 'react-native-firebase';
 import Toast from 'react-native-simple-toast';
 import * as RootNavigation from '../../src/screens/RootNavigation';
 
-export const logOUtUser = () => {
+export const logOUtUser = navigation => {
   return dispatch => {
     // dispatch({ type: LOGOUT_USER });
     firebase
@@ -18,7 +18,7 @@ export const logOUtUser = () => {
       .signOut()
       .then(() => {
         console.log('logout user success');
-        logoutUserSuccess(dispatch);
+        logoutUserSuccess(dispatch, navigation);
       })
       .catch(error => {
         console.log(error);
@@ -27,6 +27,32 @@ export const logOUtUser = () => {
   };
 };
 
+export const registarUser = (email, password, name) => {
+  console.log('registar');
+  console.log(email, password, name);
+  return dispatch => {
+    // console.log(dispatch);
+    // dispatch({type: LOGIN_USER});
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(user => {
+        console.log('then 2', user);
+        firebase.auth().currentUser.updateProfile({
+          displayName: name,
+        });
+        return user;
+      })
+      .then(user => {
+        console.log('then3', user);
+        registerUserSuccess(dispatch, user);
+      })
+      .catch(er => {
+        console.log('error create', er);
+        loginUserFail(dispatch);
+      });
+  };
+};
 export const loginUser = (email, password, name) => {
   console.log('login');
   console.log(email, password);
@@ -47,28 +73,8 @@ export const loginUser = (email, password, name) => {
         loginUserSuccess(dispatch, user);
       })
       .catch(error => {
-        console.log('er sign', error);
-        firebase
-          .auth()
-          .createUserWithEmailAndPassword(email, password)
-          .then(user => {
-            console.log('succes create', user);
-            loginUserSuccess(dispatch, user);
-          })
-          .then(user => {
-            firebase.auth().currentUser.updateProfile({
-              displayName: name,
-            });
-            return user;
-          })
-          .then(user => {
-            console.log('then2', user);
-            loginUserSuccess(dispatch, user);
-          })
-          .catch(() => {
-            console.log('error create');
-            loginUserFail(dispatch);
-          });
+        console.log('error create');
+        loginUserFail(dispatch);
       });
   };
 };
@@ -82,6 +88,7 @@ const logoutUserFail = dispatch => {
 };
 
 const loginUserSuccess = (dispatch, user) => {
+  // console.log('reducer', user);
   RootNavigation.navigate('HomeScreen');
   Toast.show('login success', Toast.LONG);
   dispatch({
@@ -90,8 +97,19 @@ const loginUserSuccess = (dispatch, user) => {
   });
 };
 
-const logoutUserSuccess = dispatch => {
+const registerUserSuccess = (dispatch, user) => {
+  // console.log('reducer', user);
+  // RootNavigation.navigate('HomeScreen');
+  Toast.show('registaer success', Toast.LONG);
+  dispatch({
+    type: LOGIN_USER_SUCCESS,
+    payload: user,
+  });
+};
+
+const logoutUserSuccess = (dispatch, navigation) => {
   console.log('logout user Action');
+  navigation.closeDrawer();
   Toast.show('logOut success', Toast.LONG);
   dispatch({
     type: LOGOUT_USER_SUCCESS,

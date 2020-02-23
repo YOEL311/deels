@@ -3,7 +3,6 @@ import DetailsScreen from '../screens/DetailsScreen';
 import SettingScreen from '../screens/SettingScreen';
 import DeelScreen from '../screens/DellsScreen';
 import SignScreen from '../screens/user/Sign';
-import SignScreen2 from '../screens/user/Sign2';
 import RegistarScreen from '../screens/user/Registar';
 import ForgotPasswordScreen from '../screens/user/ForgotPassword';
 
@@ -66,17 +65,8 @@ const RouteConfigs = {
   SignScreen: {
     screen: SignScreen,
     navigationOptions: {
-      // drawerLabel: getLabelIsLogin('כניסה'),
-      drawerLabel: 'כניסה 1',
-    },
-  },
-
-  SignScreen2: {
-    screen: SignScreen2,
-    navigationOptions: {
-      // drawerLabel: getLabelIsLogin('כניסה'),
-      // drawerLabel: aa('כניסה'),
-      drawerLabel: 'כניסה  הוקס',
+      drawerLabel: getLabelIsLogin('כניסה'),
+      // drawerLabel: 'כניסה 1',
     },
   },
 

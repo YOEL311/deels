@@ -82,7 +82,7 @@ const btnToggleLogInOut = props => {
             return props.navigation.navigate('SignScreen');
             // props.loginUser({ email: "nofarn100@gmail.com", password: "123456" })
           } else {
-            return props.logOUtUser();
+            return props.logOUtUser(props.navigation);
           }
         }}
       />

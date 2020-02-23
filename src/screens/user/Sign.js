@@ -6,12 +6,11 @@ import {loginUser} from '../../actions/AuthActions';
 import {useSelector, useDispatch} from 'react-redux';
 
 function Login({navigation}) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('yoel301@gmail.com');
+  const [password, setPassword] = useState('123456');
 
   const toLogin = () => {
-    dispatch(loginUser(email, password, name));
+    dispatch(loginUser(email, password));
   };
   // const user = useSelector(state => state.auth.user);
   // console.log('counter', user);
@@ -19,16 +18,6 @@ function Login({navigation}) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.inputs}
-          placeholder="Your Name"
-          // secureTextEntry={true}
-          underlineColorAndroid="transparent"
-          onChangeText={nameCange => setName(nameCange)}
-        />
-      </View>
-
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.inputs}
