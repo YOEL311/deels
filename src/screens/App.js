@@ -6,6 +6,7 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 import RouteConfigs from '../router/routers';
 import Icon from 'react-native-vector-icons/Entypo';
 import CustomDrawer from './Drawer';
+import CustomDrawer2 from './Draewr2';
 
 const navigationOptionsHeader = ({navigation}) => {
   return {
@@ -36,7 +37,7 @@ const navigationOptionsHeader = ({navigation}) => {
 };
 
 const DrawerNavigatorConfig = {
-  contentComponent: CustomDrawer,
+  contentComponent: CustomDrawer2,
   drawerBackgroundColor: '#f4f5f8',
   mode: 'modal',
   // drawerPosition: 'right',

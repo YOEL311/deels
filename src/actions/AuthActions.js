@@ -99,7 +99,7 @@ const loginUserSuccess = (dispatch, user) => {
 
 const registerUserSuccess = (dispatch, user) => {
   // console.log('reducer', user);
-  // RootNavigation.navigate('HomeScreen');
+  RootNavigation.navigate('HomeScreen');
   Toast.show('registaer success', Toast.LONG);
   dispatch({
     type: LOGIN_USER_SUCCESS,

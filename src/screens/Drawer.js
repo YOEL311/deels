@@ -7,7 +7,7 @@ import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons';
 import toGoOut from './LogOut';
 import {loginUser, logOUtUser} from '../actions';
 const CustomDrawer = props => {
-  // console.log(props.user)
+  console.log(props);
   return (
     <View style={{flex: 1, backgroundColor: 'rgba(27, 31,35, 0.1)'}}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
