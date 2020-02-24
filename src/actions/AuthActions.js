@@ -73,10 +73,13 @@ export const loginUser = (email, password, name) => {
 };
 
 const loginUserFail = dispatch => {
+  Toast.show('logIn fail', Toast.LONG);
   dispatch({type: LOGIN_USER_FAIL});
 };
 
 const logoutUserFail = dispatch => {
+  Toast.show('logOut fail', Toast.LONG);
+
   dispatch({type: LOGOUT_USER_FAIL});
 };
 
@@ -90,7 +93,7 @@ const loginUserSuccess = (dispatch, user) => {
   });
 };
 
-const registerUserSuccess = (dispatch, user) => {
+export const registerUserSuccess = (dispatch, user) => {
   // console.log('reducer', user);
   RootNavigation.navigate('HomeScreen');
   Toast.show('registaer success', Toast.LONG);
@@ -107,4 +110,21 @@ const logoutUserSuccess = (dispatch, navigation) => {
   dispatch({
     type: LOGOUT_USER_SUCCESS,
   });
+};
+
+export const forgotPassword = emailAddress => {
+  return dispatch => {
+    firebase
+      .auth()
+      .sendPasswordResetEmail(emailAddress)
+      .then(function() {
+        console.log('success sent email');
+      })
+      .catch(function(error) {
+        console.log('error send email', error);
+      });
+
+    Toast.show('Sent Email', Toast.LONG);
+    RootNavigation.navigate('HomeScreen');
+  };
 };

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View, ScrollView, Text} from 'react-native';
 import {DrawerNavigatorItems} from 'react-navigation-drawer';

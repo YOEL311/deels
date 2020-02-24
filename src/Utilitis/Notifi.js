@@ -96,7 +96,7 @@ export default class Notifi extends Component {
     // this.messageListener()
 
     this.handleSignUp();
-    // this.checkPermission();
+    this.checkPermission();
     // this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
   }
   componentWillUnmount() {

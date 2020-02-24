@@ -1,5 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createDrawerNavigator} from 'react-navigation-drawer';
@@ -46,7 +45,6 @@ const DrawerNavigatorConfig = {
 
   // intialRouteName: 'DetailsScreen',
   intialRouteName: 'HomeScreen',
-  drawerType: 'slide',
   // drawerWidth: 190,
   // overlayColor: 0,
 };
@@ -76,9 +74,6 @@ import ReduxThunk from 'redux-thunk';
 
 export const store = createStore(reducer, applyMiddleware(ReduxThunk));
 const AppContainer = createAppContainer(AppStack);
-
-// import {NavigationContainer} from '@react-navigation/native';
-// import {navigationRef} from './RootNavigation';
 
 import {navigate, setNavigator} from './RootNavigation';
 
