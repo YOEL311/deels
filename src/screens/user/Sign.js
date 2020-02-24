@@ -6,7 +6,7 @@ import {loginUser} from '../../actions/AuthActions';
 import {useSelector, useDispatch} from 'react-redux';
 const Login = ({navigation}) => {
   // function Login({navigation}) {
-  const [email, setEmail] = useState('yoel301@gmail.com');
+  const [email, setEmail] = useState('nofarn100@gmail.com');
   const [password, setPassword] = useState('123456');
 
   const toLogin = () => {

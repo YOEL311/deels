@@ -36,16 +36,15 @@ export const registarUser = (email, password, name) => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(user => {
-        console.log('then 2', user);
+      .then(() =>
         firebase.auth().currentUser.updateProfile({
           displayName: name,
-        });
-        return user;
-      })
-      .then(user => {
-        console.log('then3', user);
-        registerUserSuccess(dispatch, user);
+        }),
+      )
+      .then(() => {
+        const newUser = firebase.auth().currentUser;
+        console.log('then3', newUser);
+        registerUserSuccess(dispatch, newUser);
       })
       .catch(er => {
         console.log('error create', er);
@@ -62,12 +61,6 @@ export const loginUser = (email, password, name) => {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(user => {
-        firebase.auth().currentUser.updateProfile({
-          displayName: name,
-        });
-        return user;
-      })
       .then(user => {
         console.log('then2', user);
         loginUserSuccess(dispatch, user);

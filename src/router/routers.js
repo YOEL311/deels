@@ -12,7 +12,6 @@ const getLabelIsLogin = label =>
   function aFunction() {
     let user = store?.getState().auth.user;
     let result = user === null ? () => null : label;
-    console.log('label', label);
     return result;
   };
 

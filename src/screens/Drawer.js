@@ -1,13 +1,16 @@
 import React from 'react';
-import {StyleSheet, View, ScrollView, Text, StatusBar} from 'react-native';
+import {StyleSheet, View, ScrollView, Text} from 'react-native';
 import {DrawerNavigatorItems} from 'react-navigation-drawer';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconSimple from 'react-native-vector-icons/SimpleLineIcons';
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons';
-import toGoOut from './LogOut';
-import {loginUser, logOUtUser} from '../actions';
-const CustomDrawer = props => {
-  console.log(props);
+import {logOUtUser} from '../actions';
+import {useSelector, useDispatch} from 'react-redux';
+
+const Drawer = props => {
+  const user = useSelector(state => state.auth.user);
+  const displayNameUser = user?.user.displayName;
+
   return (
     <View style={{flex: 1, backgroundColor: 'rgba(27, 31,35, 0.1)'}}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -29,16 +32,15 @@ const CustomDrawer = props => {
             alignSelf: 'center',
             paddingHorizontal: 20,
           }}>
-          שלום {props.user !== null ? props?.user?.user?.displayName : 'אורח'}
+          שלום {displayNameUser !== undefined ? displayNameUser : 'אורח'}
         </Text>
       </View>
-
       <ScrollView persistentScrollbars>
         <DrawerNavigatorItems {...props} />
       </ScrollView>
 
       <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-        {btnToggleLogInOut(props)}
+        {BtnToggleLogInOut(props)}
         <View style={{justifyContent: 'center', padding: 20}}>
           <IconSimpleLine
             style={styles.iconStyle}
@@ -54,6 +56,32 @@ const CustomDrawer = props => {
   );
 };
 
+const BtnToggleLogInOut = ({navigation}) => {
+  const user = useSelector(state => state.auth.user);
+  const dispatch = useDispatch();
+  const isLogin = user !== null ? true : false;
+  const toogleBtn = !isLogin ? 'login' : 'logout';
+
+  return (
+    <View style={{justifyContent: 'center', padding: 20}}>
+      <IconSimple
+        style={styles.iconStyle}
+        name={toogleBtn}
+        color={'gray'}
+        size={30}
+        onPress={() => {
+          if (!isLogin) {
+            navigation.navigate('SignScreen');
+          } else {
+            dispatch(logOUtUser(navigation));
+          }
+        }}
+      />
+      <Text style={styles.textIconStyle}>{toogleBtn} </Text>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   iconStyle: {
     padding: 20,
@@ -65,38 +93,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-
-import {useState} from 'react';
-
-const btnToggleLogInOut = props => {
-  const toogleBtn = props.user === null ? 'login' : 'logout';
-  return (
-    <View style={{justifyContent: 'center', padding: 20}}>
-      <IconSimple
-        style={styles.iconStyle}
-        name={toogleBtn}
-        color={'gray'}
-        size={30}
-        onPress={() => {
-          if (props.user === null) {
-            return props.navigation.navigate('SignScreen');
-            // props.loginUser({ email: "nofarn100@gmail.com", password: "123456" })
-          } else {
-            return props.logOUtUser(props.navigation);
-          }
-        }}
-      />
-      <Text style={styles.textIconStyle}>{toogleBtn}</Text>
-    </View>
-  );
-};
-
-import {connect} from 'react-redux';
-const mapStateToProps = state => {
-  const {error, loading, user} = state.auth;
-  console.log('state', user);
-  user && console.log(user?.user?.displayName);
-  return {error, loading, user};
-};
-
-export default connect(mapStateToProps, {loginUser, logOUtUser})(CustomDrawer);
+export default Drawer;
