@@ -4,8 +4,8 @@ import {styles} from './StyleUser';
 import {loginUser} from '../../actions/AuthActions';
 
 import {useSelector, useDispatch} from 'react-redux';
-
-function Login({navigation}) {
+const Login = ({navigation}) => {
+  // function Login({navigation}) {
   const [email, setEmail] = useState('yoel301@gmail.com');
   const [password, setPassword] = useState('123456');
 
@@ -61,6 +61,6 @@ function Login({navigation}) {
       </TouchableHighlight>
     </View>
   );
-}
+};
 
 export default Login;
