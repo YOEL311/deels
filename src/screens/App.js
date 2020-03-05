@@ -66,13 +66,32 @@ const StackNavigatorConfig2 = {
 const AppStack = createStackNavigator(StackRouteConfigs, StackNavigatorConfig2);
 // export default createAppContainer(AppStack);
 
+// import {Provider} from 'react-redux';
+// import {createStore, applyMiddleware} from 'redux';
+
+// import reducer from '../Reducers';
+// import ReduxThunk from 'redux-thunk';
+
+// export const store = createStore(reducer, applyMiddleware(ReduxThunk));
+
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
 
 import reducer from '../Reducers';
 import ReduxThunk from 'redux-thunk';
 
-export const store = createStore(reducer, applyMiddleware(ReduxThunk));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// export const store = createStore(
+// reducer,
+// /* preloadedState, */ composeEnhancers(),
+// export const store = createStore(reducer, applyMiddleware(ReduxThunk));
+// );
+
+export const store = createStore(
+  reducer,
+  composeEnhancers(applyMiddleware(ReduxThunk)),
+);
+
 const AppContainer = createAppContainer(AppStack);
 
 import {navigate, setNavigator} from './RootNavigation';
