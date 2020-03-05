@@ -7,6 +7,7 @@ import IconSimple from 'react-native-vector-icons/SimpleLineIcons';
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons';
 import {logOUtUser} from '../actions';
 import {useSelector, useDispatch} from 'react-redux';
+import I18n from '../Utilitis/i18n';
 
 const Drawer = props => {
   const user = useSelector(state => state.auth.user);
@@ -33,7 +34,8 @@ const Drawer = props => {
             alignSelf: 'center',
             paddingHorizontal: 20,
           }}>
-          שלום {displayNameUser !== undefined ? displayNameUser : 'אורח'}
+          {I18n.t('hello')}{' '}
+          {displayNameUser !== undefined ? displayNameUser : I18n.t('juest')}
         </Text>
       </View>
       <ScrollView persistentScrollbars>

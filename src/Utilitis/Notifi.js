@@ -94,7 +94,6 @@ export default class Notifi extends Component {
   async componentDidMount() {
     // console.log('componeent did');
     // this.messageListener()
-
     // this.handleSignUp();
     // this.checkPermission();
     // this.writeUserData("ijljl", "ijhjk", "אאאאאאאא")
