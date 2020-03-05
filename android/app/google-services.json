@@ -30,6 +30,13 @@
             {
               "client_id": "927481565824-n55d1gog2abemf3mt6i3aa2l5tgftbqu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "927481565824-8e6v822odg8l00o2cbs6lk9neu60eiqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.deel"
+              }
             }
           ]
         }

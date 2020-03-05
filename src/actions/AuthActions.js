@@ -66,7 +66,7 @@ export const loginUser = (email, password, name) => {
         loginUserSuccess(dispatch, user);
       })
       .catch(error => {
-        console.log('error create');
+        console.log('error create'.er);
         loginUserFail(dispatch);
       });
   };
