@@ -1,10 +1,6 @@
 matrix:
   include:
-    - stage: Test and lint ✅
-  language: node_js
-  node_js: 8.5.0
-  install: yarn
-  script: npm run test:lint && npm run test:unit
+   
     - language: objective-c
       os: osx
       xcode_workspace: '../ios/YourProject.xcworkspace'
@@ -36,4 +32,4 @@ matrix:
       language: node_js
       node_js: lts/*
       install: true
-      script: echo "MASTER BRANCH"
+      script: npm run test:lint && npm run test:unit
