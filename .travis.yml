@@ -28,10 +28,14 @@ matrix:
       # script:
       #   - echo "android script"
 
-    - if: branch = check_travis
-      language: node_js
-      node_js: lts/*
-      install: true
-      language: node_js
-      node_js: 8.5.0
-      script: npm run test
+    # - if: branch = check_travis
+    #   language: node_js
+    #   install: true
+    #   language: node_js
+    #   node_js: 8.5.0
+    #   script: npm run test
+- stage: Test and lint ✅
+  language: node_js
+  node_js: 8.5.0
+  install: yarn
+  script:
