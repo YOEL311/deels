@@ -15,6 +15,15 @@ import renderer from 'react-test-renderer';
 //   expect(tree).toMatchSnapshot();
 // });
 
+beforeAll(done => {
+  console.log('after');
+  done();
+});
+
+// afterAll(async () => {
+//   await firebase.firestore().disableNetwork();
+// });
+
 test('test Card', () => {
   const tree = renderer.create(<DellsScreen />).toJSON();
   expect(tree).toMatchSnapshot();
