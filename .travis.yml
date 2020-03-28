@@ -1,6 +1,5 @@
 matrix:
   include:
-   
     - language: objective-c
       os: osx
       xcode_workspace: '../ios/YourProject.xcworkspace'
@@ -28,7 +27,8 @@ matrix:
         - echo "android install"
       script:
         - echo "android script"
-    - if: branch = master
+
+    - if: branch = check_travis
       language: node_js
       node_js: lts/*
       install: true
