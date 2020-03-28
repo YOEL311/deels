@@ -9,6 +9,7 @@ class DellsScreen extends Component {
     let cards = data.map(curr => {
       return <MyCard data={curr} key={curr.title} />;
     });
+    
     return cards;
   };
 
