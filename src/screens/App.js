@@ -96,7 +96,7 @@ const AppContainer = createAppContainer(AppStack);
 
 import {navigate, setNavigator} from './RootNavigation';
 
-export default RNRedux = () => (
+const RNRedux = () => (
   <Provider store={store}>
     <AppContainer
       ref={navigator => {
@@ -105,3 +105,5 @@ export default RNRedux = () => (
     />
   </Provider>
 );
+
+export default RNRedux;

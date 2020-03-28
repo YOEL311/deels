@@ -9,6 +9,7 @@ class DellsScreen extends Component {
     let cards = data.map(curr => {
       return <MyCard data={curr} key={curr.title} />;
     });
+    
     return cards;
   };
 
@@ -33,4 +34,5 @@ const mapStateToProps = () => {
   return {sss: 'ssgs '};
 };
 
-export default connect(mapStateToProps)(DellsScreen);
+// export default connect(mapStateToProps)(DellsScreen);
+export default DellsScreen;

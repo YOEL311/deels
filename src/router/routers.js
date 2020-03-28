@@ -45,7 +45,7 @@ const RouteConfigs = {
   Screen6: {
     screen: HomeScreen,
     navigationOptions: {
-      drawerLabel: 'אודותינו',
+      drawerLabel: 'אודותינו ',
     },
   },
   Screen7: {
