@@ -31,7 +31,7 @@ matrix:
     language: node_js
     install: true
     node_js: 8.5.0
-    install: yarn
+    install: npm
     script: npm run test
     #   language: node_js
     #   install: true
