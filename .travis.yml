@@ -32,4 +32,4 @@ matrix:
       language: node_js
       node_js: lts/*
       install: true
-      script: npm run test:lint && npm run test:unit
+      script: npm run test
