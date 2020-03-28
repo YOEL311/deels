@@ -17,24 +17,22 @@ matrix:
     #     - echo "script"
     # - language: android
     #   android:
-      #   components:
-      #     - tools
-      #     - platform-tools
-      # sudo: true
-      # before_install:
-      #   - echo "android before_install"
-      # install:
-      #   - echo "android install"
-      # script:
-      #   - echo "android script"
-
+    #   components:
+    #     - tools
+    #     - platform-tools
+    # sudo: true
+    # before_install:
+    #   - echo "android before_install"
+    # install:
+    #   - echo "android install"
+    # script:
+    #   - echo "android script"
     # - if: branch = check_travis
     #   language: node_js
     #   install: true
     #   language: node_js
     #   node_js: 8.5.0
     #   script: npm run test
-- stage: Test and lint ✅
   language: node_js
   node_js: 8.5.0
   install: yarn
