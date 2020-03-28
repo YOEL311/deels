@@ -47,7 +47,7 @@ const MyCard = ({data}) => {
           </Left>
         </CardItem>
         <CardItem>
-          <Swiper2 images={data.images} />
+          {/* <Swiper2 images={data.images} /> */}
         </CardItem>
 
         <CardItem>

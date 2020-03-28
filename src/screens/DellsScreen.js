@@ -18,7 +18,7 @@ class DellsScreen extends Component {
         {/* <Header /> */}
         <Content>
           <ScrollView>
-            <Notifi />
+            {/* <Notifi /> */}
             {this.renderCards()}
           </ScrollView>
         </Content>
