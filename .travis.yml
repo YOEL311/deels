@@ -1,64 +1,18 @@
-#matrix:
-language: node_js
-     jobs:
 
-  # include:
-    # - language: objective-c
-    #   os: osx
-    #   xcode_workspace: '../ios/YourProject.xcworkspace'
-    #   xcode_scheme: YourProject
-    #   xcode_sdk: iphonesimulator9.0
-    #   osx_image: xcode10.1
-    #   podfile: ios/Podfile
-    #   node_js: false
-    #   sudo: true
-    #   before_install:
-    #     - echo "before_install"
-    #   install:
-    #     - echo "install"
-    #   script:
-    #     - echo "script"
-    # - language: android
-    #   android:
-    #   components:
-    #     - tools
-    #     - platform-tools
-    # sudo: true
-    # before_install:
-    #   - echo "android before_install"
-    # install:
-    #   - echo "android install"
-    # script:
-    #   - echo "android script"
-    - stage: test lint
-    language: node_js
-    install: true
-    node_js: 12.15.0
-    install: npm install
-    script: npm run lint
- 
-    - stage: test jest
-    language: node_js
-    install: true
-    node_js: 12.15.0
-    install: npm install
-    script: npm run jest
-  # include:
-  #   - stage: test
-  #     script: ./test 1
-  #   - # stage name not required, will continue to use `test`
-  #     script: ./test 2
-  #   - stage: deploy
-  #     script: ./deploy
-# stage: Test and lint 
-#     language: node_js
-#     node_js: 8.5.0
-#     install: npm install
-#     script: npm run test
-    #   language: node_js
-    #   install: true
-    #   language: node_js
-    #   node_js: 8.5.0
-    #   script: npm run test
+language: node_js
+stages: 
+   - stage: test jest
+     include:
+     install: true
+     node_js: 12.15.0
+     install: npm install
+     script: npm run jest
+   - stage: test lint
+     include:
+     install: true
+     node_js: 12.15.0
+     install: npm install
+     script: npm run lint
+
 
 
