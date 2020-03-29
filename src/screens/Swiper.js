@@ -8,12 +8,7 @@ const renderImages = images => {
   let swipImages = images.map(currImg => {
     return (
       <View key={currImg.uri}>
-        {/* <Image */}
-        {/* source={{ */}
-        {/* uri: currImg.uri, */}
-        {/* }} */}
-        {/* style={styles.child} */}
-        {/* /> */}
+        <Image source={{uri: currImg.uri}} style={styles.child} />
       </View>
     );
   });
