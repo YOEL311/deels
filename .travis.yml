@@ -1,15 +1,17 @@
 matrix:
+  - stage: test jest
     language: node_js
     node_js: 12.15.0
     install: true
     install: npm install
-    script: npm run jest
+    script: npm run test
 
-    # language: node_js
-    # node_js: 12.15.0
-    # install: true
-    # install: npm install
-    # script: npm run lint
+  - stage: test lint
+    language: node_js
+    node_js: 12.15.0
+    install: true
+    install: npm install
+    script: npm run lint
 
 #  - stage: Test and lint
 #    language: node_js
