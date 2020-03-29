@@ -1,4 +1,7 @@
-matrix:
+os: linux
+language: rubyd
+dist: xenial
+jobs:
   # - stage: test lint  ✅
   #   language: node_js
   #   node_js: 12.15.0
@@ -37,7 +40,6 @@ matrix:
     osx_image: xcode10.1
     podfile: ios/Podfile
     node_js: false
-    sudo: true
     before_install:
       - echo "before_install"
     install:
