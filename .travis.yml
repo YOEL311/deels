@@ -11,25 +11,25 @@ matrix:
     install: npm install
     script: npm run test
 
-  - stage: Deploy Android 🤖
-    # if: branch = master AND type = push
-    language: android
-    jdk: oraclejdk8
-    android:
-      components:
-        - tools
-        - platform-tools
-        - android-26
-        - extra-google-m2repository
-        - extra-google-google_play_services
-    before_install:
-      - nvm install 8.5.0
-      - gem install bundler
-      - bundle install
-    before_script:
-      - ./internals/scripts/travis/gitconfig.sh
-    install: yarn
-    script: npm run deployment:android
+  # - stage: Deploy Android 
+  #   # if: branch = master AND type = push
+  #   language: android
+  #   jdk: oraclejdk8
+  #   android:
+  #     components:
+  #       - tools
+  #       - platform-tools
+  #       - android-26
+  #       - extra-google-m2repository
+  #       - extra-google-google_play_services
+  #   before_install:
+  #     - nvm install 8.5.0
+  #     - gem install bundler
+  #     - bundle install
+  #   before_script:
+  #     - ./internals/scripts/travis/gitconfig.sh
+  #   install: yarn
+  #   script: npm run deployment:android
 
   - stage: Deploy iOS 🍏
     # if: branch = master AND type = push
@@ -42,4 +42,23 @@ matrix:
       - ./internals/scripts/travis/gitconfig.sh
     install: yarn
     script: npm run deployment:ios
+
+  - stage: Deploy Android s
+    language: android
+    android:
+        components:
+          - tools
+          - platform-tools
+        sudo: true
+        before_install:
+        - echo "android before_install"
+        install:
+        - echo "android install"
+        script:
+        - echo "android script"
+  # - if: branch = master
+    # language: node_js
+    # node_js: lts/*
+    # install: true
+    # script: echo "MASTER BRANCH"
 # http://www.yamllint.com/
