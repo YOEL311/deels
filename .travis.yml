@@ -23,7 +23,6 @@ matrix:
     before_install:
       - nvm install 8.5.0
       - gem install bundler
-      - bundle install
     # before_script:
     #   - ./internals/scripts/travis/gitconfig.sh
     install: yarn
