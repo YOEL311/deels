@@ -11,7 +11,7 @@ matrix:
     install: npm install
     script: npm run test
 
-  # - stage: Deploy Android 
+  # - stage: Deploy Android
   #   # if: branch = master AND type = push
   #   language: android
   #   jdk: oraclejdk8
@@ -38,29 +38,28 @@ matrix:
     os: osx
     osx_image: xcode9.2
     before_install: bundle install
-    before_script:
-      - ./internals/scripts/travis/gitconfig.sh
-    install: yarn
+    # before_script:
+    #   - ./internals/scripts/travis/gitconfig.sh
+    install: npm install
     script: npm run deployment:ios
-
 
   - stage: Deploy Android s
     language: android
     android:
-        components:
-          - tools
-          - platform-tools
-        sudo: true
-        before_install:
+      components:
+        - tools
+        - platform-tools
+      sudo: true
+      before_install:
         - echo "android before_install"
-        install:
+      install:
         - echo "android install"
-        script:
+      script:
         - echo "android script"
   # - if: branch = master
-    # language: node_js
-    # node_js: lts/*
-    # install: true
-    # script: echo "MASTER BRANCH"
+  # language: node_js
+  # node_js: lts/*
+  # install: true
+  # script: echo "MASTER BRANCH"
 # http://www.yamllint.com/
 
