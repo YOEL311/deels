@@ -29,12 +29,19 @@
     #   - echo "android install"
     # script:
     #   - echo "android script"
-    - stage: test
+    - stage: test lint
     language: node_js
     install: true
-    node_js: 8.5.0
+    node_js: 12.15.0
     install: npm install
-    script: npm run test
+    script: npm run lint
+ 
+    - stage: test jest
+    language: node_js
+    install: true
+    node_js: 12.15.0
+    install: npm install
+    script: npm run jest
   # include:
   #   - stage: test
   #     script: ./test 1
