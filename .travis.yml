@@ -33,11 +33,13 @@ matrix:
 
   - stage: Deploy iOS 🍏
     # if: branch = master AND type = push
-    language: node_js
-    node_js: 8.5.0
+    language: objective-c
     os: osx
     osx_image: xcode9.2
-    before_install: bundle install
+    before_install:
+      - gem install cocoapods # Since Travis is not always on latest version
+      - gem update concurrent-ruby
+      - pod setup
     # before_script:
     #   - ./internals/scripts/travis/gitconfig.sh
     install: npm install
