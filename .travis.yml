@@ -1,5 +1,5 @@
 os: linux
-language: rubyd
+language: ruby
 dist: xenial
 jobs:
   # - stage: test lint  ✅
