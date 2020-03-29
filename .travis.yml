@@ -1,13 +1,14 @@
 
 language: node_js
 node_js:
-  - "7"
+  - "12"
 stages: 
    - stage: test jest
      install: true
      node_js: 8.5.0
-     install: npm install
+     install: npm
      script: npm run jest
+
    - stage: test lint
      install: true
      node_js: 12.15.0
