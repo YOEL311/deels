@@ -32,32 +32,47 @@ matrix:
   #   script: npm run deployment:android
 
   - stage: Deploy iOS 🍏
-    # if: branch = master AND type = push
     language: objective-c
     os: osx
-    osx_image: xcode9.2
+    xcode_workspace: "../ios/YourProject.xcworkspace"
+    xcode_scheme: YourProject
+    xcode_sdk: iphonesimulator9.0
+    osx_image: xcode10.1
+    podfile: ios/Podfile
+    node_js: false
+    sudo: true
     before_install:
-      - gem install cocoapods # Since Travis is not always on latest version
-      - gem update concurrent-ruby
-      - pod setup
-    # before_script:
-    #   - ./internals/scripts/travis/gitconfig.sh
-    install: npm install
-    script: npm run deployment:ios
+      - echo "before_install"
+    install:
+      - echo "install"
+    script:
+      - echo "script"
 
+    # # if: branch = master AND type = push
+    # language: objective-c
+    # os: osx
+    # osx_image: xcode9.2
+    # before_install:
+    #   - gem install cocoapods # Since Travis is not always on latest version
+    #   - gem update concurrent-ruby
+    #   - pod setup
+    # # before_script:
+    # #   - ./internals/scripts/travis/gitconfig.sh
+    # install: npm install
+    # script: npm run deployment:ios
   - stage: Deploy Android s
-    language: android
-    android:
-      components:
-        - tools
-        - platform-tools
-      sudo: true
-      before_install:
-        - echo "android before_install"
-      install:
-        - echo "android install"
-      script:
-        - echo "android script"
+    # language: android
+    # android:
+    #   components:
+    #     - tools
+    #     - platform-tools
+    #   sudo: true
+    #   before_install:
+    #     - echo "android before_install"
+    #   install:
+    #     - echo "android install"
+    #   script:
+    #     - echo "android script"
   # - if: branch = master
   # language: node_js
   # node_js: lts/*
