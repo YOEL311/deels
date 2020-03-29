@@ -1,6 +1,6 @@
-os: linux
-language: ruby
-dist: xenial
+# os: linux
+# language: ruby
+# dist: xenial
 jobs:
   # - stage: test lint  ✅
   #   language: node_js
