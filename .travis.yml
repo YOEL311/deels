@@ -1,15 +1,15 @@
 matrix:
-  - stage: test lint  ✅
-    language: node_js
-    node_js: 12.15.0
-    install: npm install
-    script: npm run lint
+  # - stage: test lint  ✅
+  #   language: node_js
+  #   node_js: 12.15.0
+  #   install: npm install
+  #   script: npm run lint
 
-  - stage: test jest
-    language: node_js
-    node_js: 12.15.0
-    install: npm install
-    script: npm run test
+  # - stage: test jest
+  #   language: node_js
+  #   node_js: 12.15.0
+  #   install: npm install
+  #   script: npm run test
 
   # - stage: Deploy Android
   #   # if: branch = master AND type = push
