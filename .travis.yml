@@ -33,12 +33,11 @@ matrix:
     node_js: 8.5.0
     install: npm install
     script: npm run test
-  - if: branch = check_travis
+ - stage: Test and lint ✅
     language: node_js
-    install: true
-    node_js: 12.15.0
+    node_js: 8.5.0
     install: npm install
-    script: npm run lint
+    script: npm run test
     #   language: node_js
     #   install: true
     #   language: node_js
