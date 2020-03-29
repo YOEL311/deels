@@ -5,12 +5,14 @@ stages:
   - stage: test jest
     language: node_js
     node_js: 12.15.0
+    install: true
     install: npm install
     script: npm run jest
 
   - stage: test lint
     language: node_js
     node_js: 12.15.0
+    install: true
     install: npm install
     script: npm run lint
 
