@@ -10,11 +10,11 @@ matrix:
     node_js: 12.15.0
     install: npm install
     script: npm run lint
+    
 
   - stage: Deploy Android 🤖
-    if: branch = master AND type = push
-   language: android
-   jdk: oraclejdk8
+    language: android
+    jdk: oraclejdk8
    android:
       components:
        - tools
