@@ -1,7 +1,7 @@
 matrix:
     # jobs:
 
-  include:
+  # include:
     # - language: objective-c
     #   os: osx
     #   xcode_workspace: '../ios/YourProject.xcworkspace'
@@ -29,7 +29,7 @@ matrix:
     #   - echo "android install"
     # script:
     #   - echo "android script"
-    - stage: test
+    # - stage: test
     language: node_js
     install: true
     node_js: 8.5.0
