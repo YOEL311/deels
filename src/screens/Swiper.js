@@ -25,8 +25,8 @@ export default class App extends PureComponent {
       <View style={styles.container}>
         <SwiperFlatList
           autoplay
-          autoplayDelay={2}
           autoplayLoop
+          autoplayDelay={2}
           index={2}
           showPagination>
           {renderImages(this.props.images)}

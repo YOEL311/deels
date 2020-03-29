@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "test": "jest",
+    "test": "jest  --forceExit",
+    "test2": "jest  --detectOpenHandles",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "lint": "eslint ."
