@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-// /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View, TouchableHighlight} from 'react-native';
 import {
@@ -8,7 +7,6 @@ import {
   Thumbnail,
   Text,
   Button,
-  Image,
   Icon,
   Left,
   Body,
@@ -17,26 +15,15 @@ import Swiper from './Swiper';
 import Swiper2 from './Swiper';
 import {Share} from 'react-native';
 import {format} from 'date-fns';
-import SwiperFlatList from 'react-native-swiper-flatlist';
 
 const onShare = props => {
   Share.share({
     title: 'a title',
     message: 'some message',
-    url: 'http://news.nativcell.com/news/2019/7/4335a2085191b528c708.jpg',
+    url: 'http://news.nativcell.com/news/2019/7/4335a2085191b528c708.jpgF',
   });
 };
-const logo = {
-  uri:
-    'http://s3.amazonaws.com/estock/fspid10/78/44/32/utah-park-national-784432-h.jpg',
-};
-const items = [
-  {id: 1, thumbnail: logo},
-  {id: 2, thumbnail: logo},
-];
 const MyCard = ({data}) => {
-  console.log(data.images);
-  console.log(items);
   // if () console.log(data.title);
   return (
     <View>
@@ -59,7 +46,6 @@ const MyCard = ({data}) => {
             </Body>
           </Left>
         </CardItem>
-
         <CardItem>
           <Swiper2 images={data.images} />
         </CardItem>
