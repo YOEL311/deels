@@ -1,0 +1,2060 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Card 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "height": 1334,
+    }
+  }
+>
+  <RCTScrollView
+    automaticallyAdjustContentInsets={false}
+    contentContainerStyle={
+      Array [
+        Object {
+          "padding": undefined,
+        },
+        undefined,
+      ]
+    }
+    contentInset={
+      Object {
+        "bottom": 0,
+      }
+    }
+    enableAutomaticScroll={true}
+    enableOnAndroid={false}
+    enableResetScrollToCoords={true}
+    extraHeight={75}
+    extraScrollHeight={0}
+    getScrollResponder={[Function]}
+    handleOnScroll={[Function]}
+    keyboardDismissMode="interactive"
+    keyboardOpeningTime={250}
+    keyboardShouldPersistTaps="handled"
+    keyboardSpace={0}
+    onScroll={[Function]}
+    resetKeyboardSpace={[Function]}
+    resetScrollToCoords={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
+    scrollEventThrottle={1}
+    scrollForExtraHeightOnAndroid={[Function]}
+    scrollIntoView={[Function]}
+    scrollToEnd={[Function]}
+    scrollToFocusedInput={[Function]}
+    scrollToPosition={[Function]}
+    showsVerticalScrollIndicator={true}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+      }
+    }
+    update={[Function]}
+    viewIsInsideTabBar={false}
+  >
+    <View>
+      <RCTScrollView>
+        <View>
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "#ccc",
+                    "borderLeftWidth": 0.5,
+                    "borderRadius": 2,
+                    "borderRightWidth": 0.5,
+                    "borderTopWidth": 0.5,
+                    "elevation": 3,
+                    "flexWrap": "nowrap",
+                    "marginBottom": 5,
+                    "marginLeft": 2,
+                    "marginRight": 2,
+                    "marginTop": 5,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.1,
+                    "shadowRadius": 1.5,
+                  },
+                  Object {
+                    "flex": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#fff",
+                      "borderRadius": 2,
+                      "flexDirection": "row",
+                      "paddingBottom": 10,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 10,
+                    },
+                    Object {
+                      "backgroundColor": "#ADD8E6",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../src/assets/flight.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "borderRadius": 28,
+                        "height": 56,
+                        "width": 56,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignItems": null,
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "marginLeft": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#000",
+                          "fontFamily": "System",
+                          "fontSize": 16,
+                        }
+                      }
+                      uppercase={false}
+                    >
+                      Travel Tours
+                    </Text>
+                    <Text
+                      note={true}
+                      style={
+                        Object {
+                          "color": "#808080",
+                          "fontFamily": "System",
+                          "fontSize": 14,
+                          "fontWeight": "400",
+                          "marginRight": 20,
+                        }
+                      }
+                      uppercase={false}
+                    >
+                      30.1.2020
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": null,
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "marginLeft": 10,
+                      }
+                    }
+                  >
+                    <View>
+                      <Text
+                        ellipsizeMode="tail"
+                        numberOfLines={2}
+                        style={
+                          Object {
+                            "color": "#000",
+                            "fontFamily": "System",
+                            "fontSize": 16,
+                          }
+                        }
+                        uppercase={false}
+                      >
+                        
+איסטנבול בדיל שכולל הכל!! החל מ- 1590 ₪ לאדם!
+
+כולל טיסה ישירה + מלון ברסלו 5 כוכבים המבוקש והמפואר +מזוודה גדולה עד 20 ק"ג וטרולי לכל נוסע! 😱😱
+
+לפניכם 7 תאריכי בחירה לנוחיותכם : 🤗
+
+...
+16/02-20/02 - הלוך ראשון בוקר, חזור חמישי בוקר.
+
+3 מבוגרים- רק 1740 ש"ח לאדם.
+זוג - רק 1690 ש"ח לאדם.
+זוג+1- רק 1590 ש"ח לאדם.
+
+17/02-21/02 - הלוך שני בוקר, חזור שישי בוקר.
+
+3 מבוגרים- רק 1790 ש"ח לאדם.
+זוג - רק 1760 ש"ח לאדם.
+זוג+1- רק 1590 ש"ח לאדם.
+
+20/02-24/02- הלוך יום חמישי בוקר, חזור שני אחר בוקר.
+
+3 מבוגרים- רק 1890 ש"ח לאדם!
+זוג- רק 1790 ש"ח לאדם!
+זוג+1- רק 1650 ש"ח לאדם!
+
+11/03-15/03 - הלוך רביעי צהריים, חזור ראשון בוקר.
+
+3 מבוגרים- רק 2060 ש"ח לאדם.
+זוג - רק 1940 ש"ח לאדם.
+זוג+1- רק 1690 ש"ח לאדם.
+
+21/04-25/04 - הלוך שלישי בוקר, חזור שבת לילה. [ימים מלאים!]
+
+3 מבוגרים- רק 2060 ש"ח לאדם.
+זוג - רק 1940 ש"ח לאדם.
+זוג+1- רק 1790 ש"ח לאדם.
+
+24/04-28/04 - הלוך שישי בוקר, חזור שלישי ערב. [ימים מלאים!]
+
+3 מבוגרים- רק 2190 ש"ח לאדם.
+זוג - רק 2060 ש"ח לאדם.
+זוג+1- רק 1890 ש"ח לאדם.
+
+10/05-14/05 - הלוך ראשון בוקר, חזור חמישי ערב. [ימים מלאים!]
+
+3 מבוגרים- רק 1790 ש"ח לאדם.
+זוג - רק 1690 ש"ח לאדם.
+זוג+1- רק 1590 ש"ח לאדם.
+
+הדיל כולל טיסות ישירות לאיסטנבול ומלון 5 כוכבים מעולה עם ביקורות מעולות! מלון מהמם השוכן בלב איסטנבול במיקום מעולה רק 500 מטרים מכיכר טקסים המרכזית והתוססת. במלון יש מרכז ספא ענק!! בגודל של 1500 מ"ר עם סאונה הממוקמת בקומה ה- (11- מטורף ) חמאם טורקי וחדר כושר. החדרים עוצבו ע"י מעצב מפורסם. במלון יש בר על הגג, שם ניתן למצוא אזור טרסת שמש עם אמבטיות עיסוי ונוף משגע! שדרת איסטיקלאל שם תמצאו שפע של מסעדות, בתי קפה, ברים, חנויות וגלריות אמנות ממוקמת במרחק של 15 דקות הליכה משם. כמו כן המלון שוכן במרחק של 1.7 ק"מ מאזור הקניות היוקרתי נישנטאשי!!!
+
+שם המלון :5*: Barceló Istanbul
+
+*ניתן להוסיף 190 ש"ח לאדם לתוספת ארוחת בוקר לכל השהייה.
+*ניתן לשלם עד 12 תשלומים
+*כולל טרולי עד 8 ק"ג וכולל מזוודה 1 עד 20 ק"ג לכל נוסע!
+*ניתן להוסיף מזוודה גדולה בתוספת תשלום.
+*לא כולל העברות.
+*מחיר נכון ל 29/01 בשעת הפרסום ועתיד להשתנות.
+להזמנות חייגו אלינו 0733744555
+ 
+                      </Text>
+                      <View
+                        accessible={true}
+                        focusable={true}
+                        isTVSelectable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={null}
+                      >
+                        <Text
+                          style={
+                            Array [
+                              Object {
+                                "color": "#000",
+                                "fontFamily": "System",
+                                "fontSize": 16,
+                              },
+                              Object {
+                                "color": "gray",
+                                "fontSize": 13,
+                              },
+                            ]
+                          }
+                          uppercase={false}
+                        >
+                          Show more...
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <RCTScrollView
+                    data={
+                      Array [
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid10/78/44/32/utah-park-national-784432-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid9/81/23/09/nimes-arena-romanempire-812309-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid10/91/16/84/nimes-arena-romanempire-911684-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid1/3500/santorini-caldera-viewpoint-3508-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                      ]
+                    }
+                    disableVirtualization={false}
+                    getItem={[Function]}
+                    getItemCount={[Function]}
+                    horizontal={true}
+                    initialNumToRender={1}
+                    initialScrollIndex={2}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onContentSizeChange={[Function]}
+                    onEndReachedThreshold={2}
+                    onLayout={[Function]}
+                    onMomentumScrollEnd={[Function]}
+                    onScroll={[Function]}
+                    onScrollBeginDrag={[Function]}
+                    onScrollEndDrag={[Function]}
+                    onScrollToIndexFailed={[Function]}
+                    onViewableItemsChanged={[Function]}
+                    pagingEnabled={true}
+                    removeClippedSubviews={false}
+                    renderItem={[Function]}
+                    scrollEnabled={true}
+                    scrollEventThrottle={50}
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                    stickyHeaderIndices={Array []}
+                    updateCellsBatchingPeriod={50}
+                    viewabilityConfig={
+                      Object {
+                        "itemVisiblePercentThreshold": 60,
+                        "minimumViewTime": 200,
+                      }
+                    }
+                    viewabilityConfigCallbackPairs={
+                      Array [
+                        Object {
+                          "onViewableItemsChanged": [Function],
+                          "viewabilityConfig": Object {
+                            "itemVisiblePercentThreshold": 60,
+                            "minimumViewTime": 200,
+                          },
+                        },
+                      ]
+                    }
+                    windowSize={21}
+                  >
+                    <View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid10/78/44/32/utah-park-national-784432-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid9/81/23/09/nimes-arena-romanempire-812309-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid10/91/16/84/nimes-arena-romanempire-911684-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </RCTScrollView>
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "bottom": 0,
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "marginVertical": 16.675,
+                          "position": "absolute",
+                          "width": "100%",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "borderBottomWidth": null,
+                        "borderColor": "#007aff",
+                        "borderLeftWidth": null,
+                        "borderRadius": 5,
+                        "borderRightWidth": null,
+                        "borderTopWidth": null,
+                        "borderWidth": undefined,
+                        "elevation": 0,
+                        "flexDirection": "row",
+                        "height": 45,
+                        "justifyContent": "space-between",
+                        "opacity": 1,
+                        "paddingBottom": null,
+                        "paddingLeft": null,
+                        "paddingRight": 15,
+                        "paddingTop": null,
+                        "shadowColor": null,
+                        "shadowOffset": null,
+                        "shadowOpacity": null,
+                        "shadowRadius": null,
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      onPress={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "color": undefined,
+                            "fontSize": 12,
+                          },
+                          Array [
+                            Object {
+                              "color": "#000",
+                              "fontSize": 30,
+                            },
+                            Object {
+                              "color": "#007aff",
+                              "fontSize": 20,
+                              "marginLeft": null,
+                              "marginRight": null,
+                              "paddingTop": 2,
+                            },
+                            Object {
+                              "paddingLeft": 15,
+                              "paddingRight": 15,
+                            },
+                          ],
+                          Object {
+                            "fontFamily": "Ionicons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "#ccc",
+                    "borderLeftWidth": 0.5,
+                    "borderRadius": 2,
+                    "borderRightWidth": 0.5,
+                    "borderTopWidth": 0.5,
+                    "elevation": 3,
+                    "flexWrap": "nowrap",
+                    "marginBottom": 5,
+                    "marginLeft": 2,
+                    "marginRight": 2,
+                    "marginTop": 5,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.1,
+                    "shadowRadius": 1.5,
+                  },
+                  Object {
+                    "flex": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#fff",
+                      "borderRadius": 2,
+                      "flexDirection": "row",
+                      "paddingBottom": 10,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 10,
+                    },
+                    Object {
+                      "backgroundColor": "#ADD8E6",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../src/assets/flight.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "borderRadius": 28,
+                        "height": 56,
+                        "width": 56,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignItems": null,
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "marginLeft": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#000",
+                          "fontFamily": "System",
+                          "fontSize": 16,
+                        }
+                      }
+                      uppercase={false}
+                    >
+                      Travel Tours
+                    </Text>
+                    <Text
+                      note={true}
+                      style={
+                        Object {
+                          "color": "#808080",
+                          "fontFamily": "System",
+                          "fontSize": 14,
+                          "fontWeight": "400",
+                          "marginRight": 20,
+                        }
+                      }
+                      uppercase={false}
+                    >
+                      28.1.2020
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": null,
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "marginLeft": 10,
+                      }
+                    }
+                  >
+                    <View>
+                      <Text
+                        ellipsizeMode="tail"
+                        numberOfLines={2}
+                        style={
+                          Object {
+                            "color": "#000",
+                            "fontFamily": "System",
+                            "fontSize": 16,
+                          }
+                        }
+                        uppercase={false}
+                      >
+                        FLY MORE PAY LESS מפגיזים בדיל מהסרטים שוב!!:) - דיל נדיר לאי סנטוריני המדהים רק 1950 שח לאדם!! (להרכב של זוג) הכולל טיסות ישירות בתאריכים 24.7-28.7 שעות טיסה :08:00 חזור 10:30 + מזוודה + מלון 4 כוכבים אקסקלוסיבי מדהים בשם : Antinea Suites & Spa Hotel עם ארוחת בוקר מהרו מס המקומות מוגבל ! *הדיל לכרגע- ומחירים יכולים להשתנות בכל עת *
+                      </Text>
+                      <View
+                        accessible={true}
+                        focusable={true}
+                        isTVSelectable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={null}
+                      >
+                        <Text
+                          style={
+                            Array [
+                              Object {
+                                "color": "#000",
+                                "fontFamily": "System",
+                                "fontSize": 16,
+                              },
+                              Object {
+                                "color": "gray",
+                                "fontSize": 13,
+                              },
+                            ]
+                          }
+                          uppercase={false}
+                        >
+                          Show more...
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <RCTScrollView
+                    data={
+                      Array [
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http: //s3.amazonaws.com/estock/fspid1/45900/lakepowell-page-arizona-45944-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid4/290500/vhszentrum-bicycle-fahrrad-290560-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid3/8200/church-cyclades-kirche-8277-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                      ]
+                    }
+                    disableVirtualization={false}
+                    getItem={[Function]}
+                    getItemCount={[Function]}
+                    horizontal={true}
+                    initialNumToRender={1}
+                    initialScrollIndex={2}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onContentSizeChange={[Function]}
+                    onEndReachedThreshold={2}
+                    onLayout={[Function]}
+                    onMomentumScrollEnd={[Function]}
+                    onScroll={[Function]}
+                    onScrollBeginDrag={[Function]}
+                    onScrollEndDrag={[Function]}
+                    onScrollToIndexFailed={[Function]}
+                    onViewableItemsChanged={[Function]}
+                    pagingEnabled={true}
+                    removeClippedSubviews={false}
+                    renderItem={[Function]}
+                    scrollEnabled={true}
+                    scrollEventThrottle={50}
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                    stickyHeaderIndices={Array []}
+                    updateCellsBatchingPeriod={50}
+                    viewabilityConfig={
+                      Object {
+                        "itemVisiblePercentThreshold": 60,
+                        "minimumViewTime": 200,
+                      }
+                    }
+                    viewabilityConfigCallbackPairs={
+                      Array [
+                        Object {
+                          "onViewableItemsChanged": [Function],
+                          "viewabilityConfig": Object {
+                            "itemVisiblePercentThreshold": 60,
+                            "minimumViewTime": 200,
+                          },
+                        },
+                      ]
+                    }
+                    windowSize={21}
+                  >
+                    <View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http: //s3.amazonaws.com/estock/fspid1/45900/lakepowell-page-arizona-45944-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid4/290500/vhszentrum-bicycle-fahrrad-290560-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid3/8200/church-cyclades-kirche-8277-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </RCTScrollView>
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "bottom": 0,
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "marginVertical": 16.675,
+                          "position": "absolute",
+                          "width": "100%",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "borderBottomWidth": null,
+                        "borderColor": "#007aff",
+                        "borderLeftWidth": null,
+                        "borderRadius": 5,
+                        "borderRightWidth": null,
+                        "borderTopWidth": null,
+                        "borderWidth": undefined,
+                        "elevation": 0,
+                        "flexDirection": "row",
+                        "height": 45,
+                        "justifyContent": "space-between",
+                        "opacity": 1,
+                        "paddingBottom": null,
+                        "paddingLeft": null,
+                        "paddingRight": 15,
+                        "paddingTop": null,
+                        "shadowColor": null,
+                        "shadowOffset": null,
+                        "shadowOpacity": null,
+                        "shadowRadius": null,
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      onPress={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "color": undefined,
+                            "fontSize": 12,
+                          },
+                          Array [
+                            Object {
+                              "color": "#000",
+                              "fontSize": 30,
+                            },
+                            Object {
+                              "color": "#007aff",
+                              "fontSize": 20,
+                              "marginLeft": null,
+                              "marginRight": null,
+                              "paddingTop": 2,
+                            },
+                            Object {
+                              "paddingLeft": 15,
+                              "paddingRight": 15,
+                            },
+                          ],
+                          Object {
+                            "fontFamily": "Ionicons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "#ccc",
+                    "borderLeftWidth": 0.5,
+                    "borderRadius": 2,
+                    "borderRightWidth": 0.5,
+                    "borderTopWidth": 0.5,
+                    "elevation": 3,
+                    "flexWrap": "nowrap",
+                    "marginBottom": 5,
+                    "marginLeft": 2,
+                    "marginRight": 2,
+                    "marginTop": 5,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.1,
+                    "shadowRadius": 1.5,
+                  },
+                  Object {
+                    "flex": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#fff",
+                      "borderRadius": 2,
+                      "flexDirection": "row",
+                      "paddingBottom": 10,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 10,
+                    },
+                    Object {
+                      "backgroundColor": "#ADD8E6",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../src/assets/flight.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "borderRadius": 28,
+                        "height": 56,
+                        "width": 56,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignItems": null,
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "marginLeft": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#000",
+                          "fontFamily": "System",
+                          "fontSize": 16,
+                        }
+                      }
+                      uppercase={false}
+                    >
+                      Travel Tours
+                    </Text>
+                    <Text
+                      note={true}
+                      style={
+                        Object {
+                          "color": "#808080",
+                          "fontFamily": "System",
+                          "fontSize": 14,
+                          "fontWeight": "400",
+                          "marginRight": 20,
+                        }
+                      }
+                      uppercase={false}
+                    >
+                      28.1.2020
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": null,
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "marginLeft": 10,
+                      }
+                    }
+                  >
+                    <View>
+                      <Text
+                        ellipsizeMode="tail"
+                        numberOfLines={2}
+                        style={
+                          Object {
+                            "color": "#000",
+                            "fontFamily": "System",
+                            "fontSize": 16,
+                          }
+                        }
+                        uppercase={false}
+                      >
+                        FLY MORE PAY LESS מפגיזים בדיל מהסרטים שוב!!:) - דיל נדיר לאי סנטוריני המדהים רק 1950 שח לאדם!! (להרכב של זוג) הכולל טיסות ישירות בתאריכים 24.7-28.7 שעות טיסה :08:00 חזור 10:30 + מזוודה + מלון 4 כוכבים אקסקלוסיבי מדהים בשם : Antinea Suites & Spa Hotel עם ארוחת בוקר מהרו מס המקומות מוגבל ! *הדיל לכרגע- ומחירים יכולים להשתנות בכל עת *
+                      </Text>
+                      <View
+                        accessible={true}
+                        focusable={true}
+                        isTVSelectable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={null}
+                      >
+                        <Text
+                          style={
+                            Array [
+                              Object {
+                                "color": "#000",
+                                "fontFamily": "System",
+                                "fontSize": 16,
+                              },
+                              Object {
+                                "color": "gray",
+                                "fontSize": 13,
+                              },
+                            ]
+                          }
+                          uppercase={false}
+                        >
+                          Show more...
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <RCTScrollView
+                    data={
+                      Array [
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid3/8200/church-cyclades-kirche-8277-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid1/291500/building-saarland-germany-291558-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid11/13/13/53/1/horse-camargue-flamingo-1313531-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>,
+                      ]
+                    }
+                    disableVirtualization={false}
+                    getItem={[Function]}
+                    getItemCount={[Function]}
+                    horizontal={true}
+                    initialNumToRender={1}
+                    initialScrollIndex={2}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onContentSizeChange={[Function]}
+                    onEndReachedThreshold={2}
+                    onLayout={[Function]}
+                    onMomentumScrollEnd={[Function]}
+                    onScroll={[Function]}
+                    onScrollBeginDrag={[Function]}
+                    onScrollEndDrag={[Function]}
+                    onScrollToIndexFailed={[Function]}
+                    onViewableItemsChanged={[Function]}
+                    pagingEnabled={true}
+                    removeClippedSubviews={false}
+                    renderItem={[Function]}
+                    scrollEnabled={true}
+                    scrollEventThrottle={50}
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                    stickyHeaderIndices={Array []}
+                    updateCellsBatchingPeriod={50}
+                    viewabilityConfig={
+                      Object {
+                        "itemVisiblePercentThreshold": 60,
+                        "minimumViewTime": 200,
+                      }
+                    }
+                    viewabilityConfigCallbackPairs={
+                      Array [
+                        Object {
+                          "onViewableItemsChanged": [Function],
+                          "viewabilityConfig": Object {
+                            "itemVisiblePercentThreshold": 60,
+                            "minimumViewTime": 200,
+                          },
+                        },
+                      ]
+                    }
+                    windowSize={21}
+                  >
+                    <View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid3/8200/church-cyclades-kirche-8277-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid1/291500/building-saarland-germany-291558-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View>
+                          <Image
+                            source={
+                              Object {
+                                "uri": "http://s3.amazonaws.com/estock/fspid11/13/13/53/1/horse-camargue-flamingo-1313531-h.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderBottomLeftRadius": 30,
+                                "borderBottomRightRadius": 30,
+                                "borderTopLeftRadius": 30,
+                                "borderTopRightRadius": 30,
+                                "height": 533.6,
+                                "justifyContent": "center",
+                                "overflow": "hidden",
+                                "width": 712,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </RCTScrollView>
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "bottom": 0,
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "marginVertical": 16.675,
+                          "position": "absolute",
+                          "width": "100%",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "gray",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 25,
+                          "height": 28.125,
+                          "marginHorizontal": 18.75,
+                          "opacity": 1,
+                          "width": 28.125,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#fff",
+                    "borderRadius": 2,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                    "paddingLeft": 15,
+                    "paddingRight": 15,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "borderBottomWidth": null,
+                        "borderColor": "#007aff",
+                        "borderLeftWidth": null,
+                        "borderRadius": 5,
+                        "borderRightWidth": null,
+                        "borderTopWidth": null,
+                        "borderWidth": undefined,
+                        "elevation": 0,
+                        "flexDirection": "row",
+                        "height": 45,
+                        "justifyContent": "space-between",
+                        "opacity": 1,
+                        "paddingBottom": null,
+                        "paddingLeft": null,
+                        "paddingRight": 15,
+                        "paddingTop": null,
+                        "shadowColor": null,
+                        "shadowOffset": null,
+                        "shadowOpacity": null,
+                        "shadowRadius": null,
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      onPress={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "color": undefined,
+                            "fontSize": 12,
+                          },
+                          Array [
+                            Object {
+                              "color": "#000",
+                              "fontSize": 30,
+                            },
+                            Object {
+                              "color": "#007aff",
+                              "fontSize": 20,
+                              "marginLeft": null,
+                              "marginRight": null,
+                              "paddingTop": 2,
+                            },
+                            Object {
+                              "paddingLeft": 15,
+                              "paddingRight": 15,
+                            },
+                          ],
+                          Object {
+                            "fontFamily": "Ionicons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </RCTScrollView>
+</View>
+`;

@@ -18,7 +18,7 @@ class DellsScreen extends Component {
         {/* <Header /> */}
         <Content>
           <ScrollView>
-            <Notifi />
+            {/* <Notifi /> */}
             {this.renderCards()}
           </ScrollView>
         </Content>
@@ -33,4 +33,5 @@ const mapStateToProps = () => {
   return {sss: 'ssgs '};
 };
 
-export default connect(mapStateToProps)(DellsScreen);
+// export default connect(mapStateToProps)(DellsScreen);
+export default DellsScreen;
