@@ -10,8 +10,18 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm test
+            - run: npm  test
+  build-and-tests-lint:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm  run lint
+
 workflows:
   build-and-test:
     jobs:
       - build-and-test
+      - build-and-tests-lint
